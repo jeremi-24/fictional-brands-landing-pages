@@ -203,7 +203,6 @@ export const site: SiteConfig = {
     columns: [
       { title: 'Maison', links: [{ label: 'Why AUREN', href: '#aura' }, { label: 'Benefits', href: '#benefits' }, { label: 'Journal', href: '#' }] },
       { title: 'Care', links: [{ label: 'Shipping', href: '#' }, { label: 'Returns', href: '#' }, { label: 'Contact', href: '#' }] },
-      { title: 'Follow', links: [{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/j%C3%A9r%C3%A9mie-ekou%C3%A9-a95873308/', icon: 'linkedin' }, { label: 'GitHub', href: 'https://github.com/jeremi-24', icon: 'github' }, { label: 'Newsletter', href: '#newsletter', icon: 'mail' }] },
     ],
     newsletter: {
       title: 'Letters from the atelier',
@@ -212,5 +211,11 @@ export const site: SiteConfig = {
       thanks: 'Thank you — the next letter is yours.',
     },
     legal: '© 2026 AUREN',
+    credit: [
+      { label: 'Made by Jérémie', href: 'https://github.com/jeremi-24' },
+      { label: 'Source', href: 'https://github.com/jeremi-24/fictional-brands-landing-pages/tree/main/landing-pages/auren' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/j%C3%A9r%C3%A9mie-ekou%C3%A9-a95873308/' },
+      { label: 'GitHub', href: 'https://github.com/jeremi-24' },
+    ],
   },
 };

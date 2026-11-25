@@ -76,19 +76,18 @@
   margin-top: 0.4rem;
 }
 
-.footer__icons {
+.footer__credit {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
 }
 
-.footer__cols .footer__icons li {
-  margin-top: 0;
+.footer__credit a {
+  transition: opacity 0.3s;
 }
 
-.footer__icons svg {
-  display: block;
-  width: 1.35rem;
-  height: 1.35rem;
+.footer__credit a:hover {
+  opacity: 0.6;
 }
 
 .footer__cols a {
