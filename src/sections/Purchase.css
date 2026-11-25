@@ -1,0 +1,312 @@
+.purchase {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  align-items: start;
+  background:
+    radial-gradient(ellipse 60% 70% at 20% 50%, color-mix(in srgb, var(--wine) 50%, transparent), transparent 70%),
+    var(--ink);
+}
+
+.purchase__visual {
+  grid-column: 1 / span 6;
+  position: sticky;
+  top: 4rem;
+}
+
+.purchase__image {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  /* bottle and box both in view: never taller than the screen */
+  width: min(100%, calc(82svh * 4 / 5));
+  margin-inline: auto;
+  border-radius: 1.1rem;
+}
+
+/* the wipe is on the picture, not on the observed box: a box clipped to
+   zero width never counts as visible, so its reveal would never fire */
+.purchase__image picture {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.8s var(--ease-silk);
+}
+
+.purchase__image.is-in picture {
+  clip-path: inset(0);
+}
+
+.purchase__image img {
+  object-position: 50% 50%;
+}
+
+.purchase__panel {
+  grid-column: 8 / span 5;
+  padding-top: 2rem;
+}
+
+.purchase__title {
+  margin: 1.6rem 0 2rem;
+}
+
+.purchase__body {
+  opacity: 0.8;
+  max-width: 30em;
+}
+
+/* ----- form ----- */
+.purchase__form {
+  margin-top: 3rem;
+  display: grid;
+  gap: 2.2rem;
+}
+
+.choice {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+}
+
+.choice legend {
+  margin-bottom: 0.8rem;
+  opacity: 0.55;
+}
+
+.choice--inline {
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+.choice__option {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 0.2rem 1rem;
+  padding: 1.1rem 0 1.1rem 1.8rem;
+  border-top: var(--hair);
+  cursor: pointer;
+  transition: padding 0.5s var(--ease-out);
+}
+
+.choice:not(.choice--inline) .choice__option:last-of-type {
+  border-bottom: var(--hair);
+}
+
+.choice__option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* the radio is a small diamond */
+.choice__option::before {
+  content: '';
+  position: absolute;
+  left: 0.2rem;
+  top: 1.55rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid currentColor;
+  rotate: 45deg;
+  transition:
+    background 0.3s,
+    scale 0.5s var(--ease-out);
+}
+
+.choice__option.is-checked::before {
+  background: var(--rose);
+  border-color: var(--rose);
+  scale: 1.2;
+}
+
+.choice__option:has(input:focus-visible) {
+  outline: 1px solid var(--rose);
+  outline-offset: 2px;
+}
+
+.choice__label {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+}
+
+.choice__detail {
+  grid-column: 1;
+  opacity: 0.55;
+}
+
+.choice__price {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  align-self: center;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.choice--inline .choice__option {
+  grid-template-columns: 1fr;
+}
+
+.purchase__row {
+  display: flex;
+  gap: var(--gap);
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  border: var(--hair);
+}
+
+.stepper button {
+  width: 3rem;
+  height: 100%;
+  border: 0;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.stepper button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.stepper output {
+  min-width: 1.5rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.purchase__cta {
+  position: relative;
+  flex: 1;
+  min-height: 4rem;
+  border: 0;
+  background: var(--light);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.purchase__cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--rose);
+  transform: translateY(101%);
+  transition: transform 0.7s var(--ease-out);
+}
+
+.purchase__cta:hover::before,
+.purchase__cta.is-added::before {
+  transform: none;
+}
+
+.purchase__cta-label,
+.purchase__cta-done {
+  display: block;
+  transition:
+    transform 0.7s var(--ease-out),
+    opacity 0.5s;
+}
+
+.purchase__cta-done {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.purchase__cta.is-added .purchase__cta-label {
+  transform: translateY(-140%);
+  opacity: 0;
+}
+
+.purchase__cta.is-added .purchase__cta-done {
+  transform: none;
+  opacity: 1;
+}
+
+.purchase__assurances {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.8rem;
+  margin-top: 1.6rem;
+  opacity: 0.6;
+}
+
+.purchase__assurances li::before {
+  content: '◇ ';
+  color: var(--rose);
+}
+
+.purchase__ritual {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  margin-top: 4rem;
+}
+
+.purchase__ritual li {
+  display: grid;
+  gap: 0.3rem;
+  padding-top: 1rem;
+  border-top: var(--hair);
+}
+
+.purchase__ritual .mono {
+  color: var(--rose);
+}
+
+.purchase__ritual strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.purchase__ritual span:last-child {
+  opacity: 0.65;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .purchase__visual,
+  .purchase__panel {
+    grid-column: 1 / -1;
+  }
+
+  .purchase__visual {
+    position: relative;
+    top: 0;
+    max-width: 34rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .purchase__ritual {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .purchase__row {
+    flex-direction: column;
+  }
+
+  .stepper {
+    justify-content: space-between;
+    height: 3.4rem;
+  }
+}
