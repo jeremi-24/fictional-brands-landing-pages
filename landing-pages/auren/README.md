@@ -6,7 +6,20 @@ Built with **React 19, TypeScript, Vite and Three.js**.
 
 ## Preview
 
+**Live: [auren-serum.vercel.app](https://auren-serum.vercel.app)**
+
+[![AUREN landing page](../../previews/auren.jpg)](https://auren-serum.vercel.app)
+
 AUREN is a fictional skincare brand built around a simple idea: less information, stronger visuals and an immersive product experience.
+
+## Lighthouse
+
+Measured with PageSpeed Insights on the live site.
+
+| | Performance | Accessibility | Best practices | SEO |
+|---|:---:|:---:|:---:|:---:|
+| Mobile | 100 | 100 | 100 | 100 |
+| Desktop | 100 | 100 | 100 | 100 |
 
 ## Getting started
 
