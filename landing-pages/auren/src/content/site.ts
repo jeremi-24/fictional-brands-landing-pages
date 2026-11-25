@@ -203,7 +203,7 @@ export const site: SiteConfig = {
     columns: [
       { title: 'Maison', links: [{ label: 'Why AUREN', href: '#aura' }, { label: 'Benefits', href: '#benefits' }, { label: 'Journal', href: '#' }] },
       { title: 'Care', links: [{ label: 'Shipping', href: '#' }, { label: 'Returns', href: '#' }, { label: 'Contact', href: '#' }] },
-      { title: 'Follow', links: [{ label: 'Instagram', href: '#', icon: 'instagram' }, { label: 'Pinterest', href: '#', icon: 'pinterest' }, { label: 'Newsletter', href: '#newsletter', icon: 'mail' }] },
+      { title: 'Follow', links: [{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/j%C3%A9r%C3%A9mie-ekou%C3%A9-a95873308/', icon: 'linkedin' }, { label: 'GitHub', href: 'https://github.com/jeremi-24', icon: 'github' }, { label: 'Newsletter', href: '#newsletter', icon: 'mail' }] },
     ],
     newsletter: {
       title: 'Letters from the atelier',
