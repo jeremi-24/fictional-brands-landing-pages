@@ -8,6 +8,7 @@
   --c: clamp(0, calc((var(--p, 0) - 0.74) / 0.16), 1);
   position: relative;
   height: 320svh;
+  transition: --p 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
 .aura__sticky {
@@ -66,7 +67,6 @@
   aspect-ratio: 2.2;
   border-radius: 50%;
   background: radial-gradient(closest-side, color-mix(in srgb, var(--rose) 55%, transparent), transparent);
-  filter: blur(40px);
   opacity: calc(0.12 + var(--k) * 0.33 - var(--r) * 0.6);
   scale: calc(0.7 + var(--k) * 0.3 + var(--r) * 0.8);
   animation: aura-breathe 6s ease-in-out infinite alternate;
@@ -85,9 +85,7 @@
   display: flex;
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 500;
-  /* small optical size = sturdier hairlines, so the letters survive at display size */
-  font-variation-settings: 'opsz' 14;
+  font-weight: 400;
   /* the full phrase fits the width; the shorter brand name then grows.
      Real font-size, not `scale`, so the glyphs are redrawn sharp instead of stretched */
   font-size: calc(clamp(2.2rem, 9vw, 10rem) * (1 + var(--k) * 0.6));
@@ -108,7 +106,6 @@
   overflow: hidden;
   max-width: calc((1 - var(--k)) * 1em);
   opacity: calc(1 - var(--k) * 1.8);
-  filter: blur(calc(var(--k) * 10px));
   translate: 0 calc(var(--k) * -0.25em);
 }
 
@@ -176,7 +173,7 @@
   }
 
   .aura__body {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 
   /* portrait: crop around the bottle, which sits right of centre */

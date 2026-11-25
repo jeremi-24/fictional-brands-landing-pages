@@ -38,7 +38,7 @@ export const site: SiteConfig = {
       metal: '#b9b1a8',
       light: '#f2e6df',
       dark: '#1d0f11',
-      fontDisplay: '"Bodoni Moda", "Didot", "Times New Roman", serif',
+      fontDisplay: '"Fraunces", "Georgia", "Times New Roman", serif',
       fontBody: '"Figtree", "Helvetica Neue", Arial, sans-serif',
       fontMono: '"IBM Plex Mono", ui-monospace, Menlo, monospace',
     },

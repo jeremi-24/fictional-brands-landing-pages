@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback, useMemo, useRef, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { CameraFocus, ShowcaseConfig, Theme } from '../content/types';
 import { Headline } from '../components/Headline';
 import { Picture } from '../components/Picture';
@@ -42,10 +42,28 @@ export function Showcase({ brand, theme, config }: Props) {
   );
   useScrollProgress(track, 'sticky', onProgress);
 
+  // three.js (~140 kB) and the WebGL scene start only when the tour is about two screens away
+  const [near, setNear] = useState(false);
+  useEffect(() => {
+    const el = track.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (!e.isIntersecting) return;
+        setNear(true);
+        io.disconnect();
+      },
+      { rootMargin: '200% 0px' },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <section id={config.id} className="showcase surface-dark" aria-label={config.eyebrow}>
       <div className="showcase__track" ref={track} style={vars({ '--steps': span + 1 })}>
       <div className="showcase__sticky">
+        {near && (
         <Suspense fallback={null}>
           <BottleStage
             name={brand}
@@ -55,6 +73,7 @@ export function Showcase({ brand, theme, config }: Props) {
             fallback={<Picture image={config.fallback} sizes="100vw" className="showcase__fallback" />}
           />
         </Suspense>
+        )}
 
         <header className={`showcase__intro ${active === -1 ? '' : 'is-away'}`}>
           <SectionMark index="02" label={config.eyebrow} />

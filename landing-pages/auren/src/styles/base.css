@@ -18,6 +18,15 @@
   --fs-mono: 0.7rem;
 }
 
+/* phones: bigger reading sizes */
+@media (max-width: 720px) {
+  :root {
+    --fs-body: 1.05rem;
+    --fs-lead: 1.12rem;
+    --fs-mono: 0.78rem;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -35,7 +44,7 @@ body {
   color: var(--light);
   font-family: var(--font-body);
   font-size: var(--fs-body);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -171,7 +180,6 @@ ol {
   font-weight: 400;
   line-height: 0.92;
   letter-spacing: -0.03em;
-  font-variation-settings: 'opsz' 96;
 }
 
 .headline__line {
@@ -335,6 +343,13 @@ ol {
   pointer-events: none;
   opacity: 0;
   transition: opacity 1.2s;
+}
+
+/* lets the Aura scene ease toward the scroll position instead of jumping with each wheel step */
+@property --p {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
 }
 
 .aura-cursor.is-on {

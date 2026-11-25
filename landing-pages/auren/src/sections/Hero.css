@@ -128,8 +128,12 @@
     position: relative;
     z-index: 0;
     order: -1;
-    height: 56svh;
+    aspect-ratio: 2.05;
     margin-top: 4.5rem;
+  }
+
+  .hero__media img {
+    object-position: 50% 30%;
   }
 
   .hero__media::after {
@@ -137,7 +141,7 @@
   }
 
   .hero__layout {
-    margin-top: -2.5rem;
+    margin-top: -0.5rem;
     position: relative;
     z-index: 1;
   }

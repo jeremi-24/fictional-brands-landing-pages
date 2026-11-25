@@ -92,7 +92,7 @@ function labelTexture(name: string, color: string) {
   g.textAlign = 'center';
   // the front of the bottle sits at u = 0.5, i.e. canvas centre
   const cx = c.width / 2;
-  g.font = '300 118px "Bodoni Moda", "Didot", serif';
+  g.font = '300 118px "Fraunces", "Georgia", serif';
   // manual letter-spacing for wide tracking
   const letters = name.split('');
   const track = 26;
@@ -104,7 +104,7 @@ function labelTexture(name: string, color: string) {
     g.fillText(l, x, 190);
     x += widths[i] + track;
   });
-  g.font = '400 30px "Hanken Grotesk", Arial, sans-serif';
+  g.font = '400 30px "Figtree", Arial, sans-serif';
   g.textAlign = 'center';
   g.fillText('CELLULAR  RENEWAL', cx, 400);
   g.fillText('SERUM  ·  30ml', cx, 446);

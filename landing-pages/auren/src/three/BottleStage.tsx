@@ -82,7 +82,7 @@ export function BottleStage({ name, theme, progress, stops, fallback }: Props) {
       under.position.set(0, 0.6, 1.6);
       scene.add(key, rim, under);
 
-      const backdrop = createBackdrop(theme.rose, theme.ink);
+      const backdrop = createBackdrop(theme.wine, theme.ink);
       const floor = createFloor(theme.rose);
       const bottle = createBottle(name, {
         glass: theme.wine,

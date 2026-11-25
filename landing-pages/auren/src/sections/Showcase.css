@@ -253,6 +253,11 @@
     opacity: 1;
   }
 
+  /* the four callouts share one spot; only the active one may draw its top rule */
+  .callout:not(.is-active) {
+    border-top-color: transparent;
+  }
+
   .callout__leader {
     display: none;
   }
@@ -262,7 +267,7 @@
   }
 
   .callout__body {
-    font-size: 0.92rem;
+    font-size: 1rem;
   }
 
   .showcase__rail {
