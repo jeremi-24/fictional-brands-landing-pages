@@ -5,10 +5,20 @@
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 1.4rem var(--pad);
-  color: #fff;
-  mix-blend-mode: difference;
-  transition: transform 0.8s var(--ease-out);
+  padding: 1.1rem var(--pad);
+  color: var(--light);
+  /* frosted glass: dark tint so the light type reads over both dark and paper sections */
+  background: color-mix(in srgb, var(--ink) 70%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
+  border-bottom: 1px solid color-mix(in srgb, var(--light) 10%, transparent);
+}
+
+/* no blur support: a solid enough tint keeps the links legible */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .nav {
+    background: color-mix(in srgb, var(--ink) 92%, transparent);
+  }
 }
 
 .nav__links,

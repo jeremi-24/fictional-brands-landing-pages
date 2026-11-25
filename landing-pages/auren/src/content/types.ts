@@ -6,6 +6,8 @@
 export interface Link {
   label: string;
   href: string;
+  /** Show this icon instead of the label (the label stays as its accessible name). */
+  icon?: 'instagram' | 'pinterest' | 'mail';
 }
 
 /** Pre-generated responsive image: files live at `${base}-${width}.{avif,webp}`. */

@@ -51,7 +51,7 @@ export const site: SiteConfig = {
       { label: 'Benefits', href: '#benefits' },
     ],
     cta: { label: 'Shop', href: '#reserve' },
-    bagLabel: 'Bag',
+    bagLabel: 'Cart',
     menuLabel: 'Menu',
   },
 
@@ -188,8 +188,8 @@ export const site: SiteConfig = {
       { id: 'once', label: 'One-time', detail: 'Single purchase', factor: 1 },
       { id: 'ritual', label: 'Ritual', detail: 'Every 10 weeks · save 10%', factor: 0.9 },
     ],
-    cta: 'Add to bag',
-    addedMessage: 'Added to your bag',
+    cta: 'Add to cart',
+    addedMessage: 'Added to your cart',
     assurances: ['Complimentary shipping', 'Thirty-night trial', 'Recyclable glass & refill'],
     labels: { size: 'Size', purchase: 'Purchase', quantity: 'Quantity', decrease: 'Decrease quantity', increase: 'Increase quantity' },
     ritual: [
@@ -203,7 +203,7 @@ export const site: SiteConfig = {
     columns: [
       { title: 'Maison', links: [{ label: 'Why AUREN', href: '#aura' }, { label: 'Benefits', href: '#benefits' }, { label: 'Journal', href: '#' }] },
       { title: 'Care', links: [{ label: 'Shipping', href: '#' }, { label: 'Returns', href: '#' }, { label: 'Contact', href: '#' }] },
-      { title: 'Follow', links: [{ label: 'Instagram', href: '#' }, { label: 'Pinterest', href: '#' }, { label: 'Newsletter', href: '#newsletter' }] },
+      { title: 'Follow', links: [{ label: 'Instagram', href: '#', icon: 'instagram' }, { label: 'Pinterest', href: '#', icon: 'pinterest' }, { label: 'Newsletter', href: '#newsletter', icon: 'mail' }] },
     ],
     newsletter: {
       title: 'Letters from the atelier',

@@ -76,6 +76,21 @@
   margin-top: 0.4rem;
 }
 
+.footer__icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__cols .footer__icons li {
+  margin-top: 0;
+}
+
+.footer__icons svg {
+  display: block;
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
 .footer__cols a {
   transition: color 0.3s;
 }
