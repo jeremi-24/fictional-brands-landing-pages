@@ -23,7 +23,7 @@ Free to use, MIT licensed.
           <img src="previews/auren.jpg" alt="AUREN landing page preview" width="700">
         </a>
       </td>
-      <td><strong><a href="landing-pages/auren">AUREN</a></strong></td>
+      <td><strong><a href="landing-pages/auren">AUREN</a></strong> · <a href="https://fictional-brands-landing-pages.vercel.app">Live</a></td>
       <td>Luxury skincare with an immersive 3D serum experience.</td>
     </tr>
   </tbody>
