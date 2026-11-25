@@ -8,9 +8,9 @@ Free to use, MIT licensed.
 
 ## Projects
 
-| Project | Concept | Stack |
+| Preview | Project | Concept |
 |---|---|---|
-| [AUREN](landing-pages/auren) | A night serum. *Aura renewed* collapses into the brand name, then a 3D bottle tour and a before/after bento | React · Vite · Three.js |
+| <a href="landing-pages/auren"><img src="previews/auren.jpg" alt="AUREN landing page preview" width="420"></a> | [AUREN](landing-pages/auren) | A night serum. *Aura renewed* collapses into the brand name, then a 3D bottle tour and a before/after bento. React · Vite · Three.js |
 
 ## Run locally
 
