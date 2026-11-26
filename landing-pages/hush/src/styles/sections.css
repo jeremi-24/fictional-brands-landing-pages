@@ -21,8 +21,11 @@
   padding-right: 4rem;
   animation: marquee 28s linear infinite;
 }
-.marquee:hover ul {
-  animation-play-state: paused;
+/* mouse only: on a touch screen hover sticks after a tap and the row stays frozen */
+@media (hover: hover) {
+  .marquee:hover ul {
+    animation-play-state: paused;
+  }
 }
 @keyframes marquee {
   to {
