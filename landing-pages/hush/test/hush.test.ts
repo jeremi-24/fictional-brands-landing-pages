@@ -25,4 +25,6 @@ for (const file of readdirSync(styles).filter((f) => f !== 'tokens.css')) {
   const found = readFileSync(new URL(file, styles), 'utf8').match(/#[0-9a-f]{3,8}\b|rgba?\(\s*\d/gi);
   assert.equal(found, null, `src/styles/${file}: use a token from tokens.css instead of ${found?.join(', ')}`);
 }
+// pictures are <img> elements, so visitors and template users can copy them; never CSS backgrounds
+for (const file of readdirSync(styles)) assert.ok(!/url\(/.test(readFileSync(new URL(file, styles), 'utf8')), `src/styles/${file}: use an <img>, not a CSS picture`);
 console.log('hush: ok');

@@ -17,7 +17,8 @@ export function Work({ config }: { config: SiteConfig['agent'] }) {
           {config.title[1]}
         </h2>
       </header>
-      <div className="work__stage" data-reveal="zoom" style={{ '--backdrop': `url(${config.background.src})` } as CSSProperties}>
+      <div className="work__stage" data-reveal="zoom">
+        <img {...config.background} className="work__sky" loading="lazy" />
         <div className="work__agent">
           <img {...config.image} loading="lazy" />
         </div>
