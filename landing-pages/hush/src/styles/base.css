@@ -1,22 +1,4 @@
-/* Hush: bright and quiet. Cream paper, soft daylight, one lime highlighter. */
-:root {
-  --paper: #fffcf2;
-  --ink: #10231c;
-  --soft: #4d6058;
-  --lime: #d7f54a;
-  --mint: #bff2da;
-  --sky: #cbe6ff;
-  --peach: #ffd9c2;
-  --lilac: #e6dcff;
-  --sun: #ffe58a;
-  --white: #fff;
-  --line: rgb(16 35 28 / 0.1);
-  --shadow: 0 1px 2px rgb(16 35 28 / 0.06), 0 14px 40px -18px rgb(16 35 28 / 0.22);
-  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --display: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif;
-  color-scheme: light;
-}
-
+/* Hush: shared elements. Colours and measures come from tokens.css. */
 *,
 *::before,
 *::after {
@@ -27,7 +9,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
 }
 
 /* the drifting daylight and flying cards must never widen the page; clip keeps sticky working */
@@ -40,7 +21,7 @@ body {
   position: relative; /* so the clip also holds the daylight layer */
   color: var(--ink);
   background: var(--paper);
-  font: 1.0625rem/1.55 'Figtree', system-ui, sans-serif;
+  font: 1.0625rem/1.55 var(--body);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -94,9 +75,13 @@ ol {
   white-space: nowrap;
 }
 
+/* one narrow column for the whole page; only the hero spreads wider, for the app picture */
 .wrap {
-  width: min(1180px, 100% - 2rem);
+  width: min(1040px, 100% - 2rem);
   margin-inline: auto;
+}
+.hero .wrap {
+  width: min(1180px, 100% - 2rem);
 }
 
 .btn {
@@ -159,7 +144,7 @@ ol {
   width: min(1180px, 100% - 1.5rem);
   padding: 0.5rem 0.5rem 0.5rem 1.1rem;
   border-radius: 99px;
-  background: rgb(255 255 255 / 0);
+  background: rgb(var(--white-rgb) / 0);
   box-shadow: 0 0 0 0 transparent;
   transition:
     background 0.35s,
@@ -168,7 +153,7 @@ ol {
 }
 .nav.is-stuck {
   width: min(1080px, 100% - 1.5rem);
-  background: rgb(255 255 255 / 0.76);
+  background: rgb(var(--white-rgb) / 0.76);
   backdrop-filter: blur(14px) saturate(1.5);
   box-shadow: var(--shadow);
 }
@@ -220,7 +205,9 @@ ol {
 
 /* ---------- sections ---------- */
 .section {
-  padding-top: clamp(5rem, 12vw, 9rem);
+  padding-top: var(--section-space);
+  /* a menu link lands with the section's first line just under the floating menu, not under its empty space */
+  scroll-margin-top: calc(6rem - var(--section-space));
 }
 .section__head {
   display: grid;

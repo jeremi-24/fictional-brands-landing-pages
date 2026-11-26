@@ -19,4 +19,10 @@ for (const dir of ['sections', 'styles', 'components']) {
     assert.ok(!/\/images\/|<svg/.test(code) || file === 'Icon.tsx', `src/${dir}/${file}: move the picture to public/images and name it in site.ts`);
   }
 }
+// the design system: colours are written in tokens.css only
+const styles = new URL('../src/styles/', import.meta.url);
+for (const file of readdirSync(styles).filter((f) => f !== 'tokens.css')) {
+  const found = readFileSync(new URL(file, styles), 'utf8').match(/#[0-9a-f]{3,8}\b|rgba?\(\s*\d/gi);
+  assert.equal(found, null, `src/styles/${file}: use a token from tokens.css instead of ${found?.join(', ')}`);
+}
 console.log('hush: ok');

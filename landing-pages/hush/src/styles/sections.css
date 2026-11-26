@@ -54,8 +54,8 @@
   gap: 0.9rem;
   padding: 1.1rem 1.25rem;
   border-radius: 1.25rem;
-  background: rgb(255 255 255 / 0.92);
-  box-shadow: 0 24px 50px -28px rgb(16 45 60 / 0.55);
+  background: var(--glass-strong);
+  box-shadow: 0 24px 50px -28px rgb(var(--depth-rgb) / 0.55);
 }
 .task:nth-of-type(1) {
   grid-area: a;
@@ -208,7 +208,7 @@
   color: var(--white);
 }
 .vault--never li i {
-  background: #ff8a6b;
+  background: var(--never);
   color: var(--ink);
 }
 .vault--manager {
@@ -218,7 +218,7 @@
   display: block;
   width: 100%;
   border-radius: 1rem;
-  box-shadow: 0 30px 60px -28px rgb(16 45 60 / 0.5);
+  box-shadow: 0 30px 60px -28px rgb(var(--depth-rgb) / 0.5);
 }
 .vault__consent {
   display: flex;
@@ -267,7 +267,7 @@
   max-width: calc(100% - 1.7rem);
   padding: 0.65rem 1.1rem;
   border-radius: 1.15rem;
-  background: rgb(255 255 255 / 0.93);
+  background: var(--glass-strong);
   backdrop-filter: blur(10px);
 }
 .strip__text strong {
@@ -292,7 +292,7 @@
 /* ---------- testimonial: one sentence ---------- */
 .quote {
   max-width: 54rem;
-  padding-top: clamp(5rem, 12vw, 9rem);
+  padding-top: clamp(3.5rem, 8vw, 6.25rem);
   text-align: center;
 }
 .quote blockquote {
@@ -310,7 +310,7 @@
   display: grid;
   justify-items: center;
   gap: 1.5rem;
-  margin-top: clamp(5rem, 12vw, 9rem);
+  margin-top: clamp(3.5rem, 8vw, 6.25rem);
   padding: clamp(3rem, 8vw, 6rem) 1.5rem;
   border-radius: 2.25rem;
   background: linear-gradient(120deg, var(--lime), var(--mint) 55%, var(--sky));

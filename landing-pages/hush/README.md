@@ -19,7 +19,7 @@ Open http://localhost:5173.
 |---|---|
 | `npm run build` | Typecheck and build for production |
 | `npm run preview` | Preview the production build |
-| `npm test` | Check that every picture the page asks for exists (Node.js 22.6+) |
+| `npm test` | Check pictures and design tokens (Node.js 22.6+) |
 
 ## Features
 
@@ -57,7 +57,7 @@ The app screens contain text, so there is one per language. They also show the l
 
 - `src/content/site.ts`: every word, picture and price.
 - `src/content/i18n.ts`: French and German.
-- `src/styles/`: colours are CSS variables at the top of `base.css`.
+- `src/styles/tokens.css`: colours, fonts and spacing, the [design system](DESIGN.md).
 - `src/sections/`: one file per section.
 
 The hero sky (`public/images/sky-*.jpg`) was generated from noise functions in code for this project; it contains no third-party material. The company logos are invented for this project. The three photos are AI-generated (Google Gemini); the people in them do not exist.

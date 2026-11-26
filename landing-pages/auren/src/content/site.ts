@@ -212,7 +212,7 @@ export const site: SiteConfig = {
     },
     legal: '© 2026 AUREN',
     credit: [
-      { label: 'Made by Jérémie', href: 'https://github.com/jeremi-24' },
+      { label: 'Made by jeremi-24', href: 'https://github.com/jeremi-24' },
       { label: 'Source', href: 'https://github.com/jeremi-24/fictional-brands-landing-pages/tree/main/landing-pages/auren' },
       { label: 'LinkedIn', href: 'https://www.linkedin.com/in/j%C3%A9r%C3%A9mie-ekou%C3%A9-a95873308/' },
       { label: 'GitHub', href: 'https://github.com/jeremi-24' },

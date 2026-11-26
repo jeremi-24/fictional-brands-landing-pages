@@ -1,0 +1,44 @@
+/*
+ * Hush design system: every colour, font and shared measure of the page.
+ * Rebrand here. No other stylesheet writes a colour (npm test checks it).
+ * See DESIGN.md.
+ */
+:root {
+  /* channels, for transparent versions: rgb(var(--ink-rgb) / 0.1) */
+  --ink-rgb: 16 35 28;
+  --white-rgb: 255 255 255;
+  --depth-rgb: 16 45 60;
+
+  /* surfaces */
+  --paper: #fffcf2;
+  --white: #fff;
+
+  /* text */
+  --ink: #10231c;
+  --ink-lead: #23372f;
+  --ink-accent: #2d5f4b;
+  --soft: #4d6058;
+
+  /* brand and support */
+  --lime: #d7f54a;
+  --mint: #bff2da;
+  --sky: #cbe6ff;
+
+  /* signals */
+  --cancel: #e8432c;
+  --never: #ff8a6b;
+
+  /* lines, glass and depth */
+  --line: rgb(var(--ink-rgb) / 0.1);
+  --glass: rgb(var(--white-rgb) / 0.78);
+  --glass-strong: rgb(var(--white-rgb) / 0.93);
+  --shadow: 0 1px 2px rgb(var(--ink-rgb) / 0.06), 0 14px 40px -18px rgb(var(--ink-rgb) / 0.22);
+
+  /* type, motion, rhythm */
+  --display: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif;
+  --body: 'Figtree', system-ui, sans-serif;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* air above every section; menu links jump past it */
+  --section-space: clamp(3.5rem, 8vw, 6.25rem);
+  color-scheme: light;
+}

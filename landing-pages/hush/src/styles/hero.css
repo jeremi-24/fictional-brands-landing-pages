@@ -14,7 +14,7 @@
   height: min(57rem, 100%);
   object-fit: cover;
   object-position: 50% 100%;
-  mask-image: linear-gradient(#000 78%, transparent);
+  mask-image: linear-gradient(var(--ink) 78%, transparent);
 }
 /* two calm lines, the second one a shade lighter: no decoration to decode */
 .hero h1 {
@@ -28,7 +28,7 @@
   display: block;
 }
 .hero h1 span + span {
-  color: #2d5f4b;
+  color: var(--ink-accent);
 }
 /* the cancelled word: a red stroke drawn across it once the title has landed */
 .struck {
@@ -44,7 +44,7 @@
   left: -0.05em;
   height: 0.11em;
   border-radius: 1em;
-  background: #e8432c;
+  background: var(--cancel);
   rotate: -3deg;
   animation: strike 0.55s 1s var(--ease) both;
 }
@@ -59,7 +59,7 @@
 .lead {
   max-width: 40rem;
   margin: 0 auto;
-  color: #23372f;
+  color: var(--ink-lead);
   font-size: 1.15rem;
 }
 .actions {
@@ -97,7 +97,7 @@
   gap: 0.45rem;
   padding: 0.4rem 0.85rem 0.4rem 0.6rem;
   border-radius: 99px;
-  background: rgb(255 255 255 / 0.78);
+  background: var(--glass);
   box-shadow: var(--shadow);
   backdrop-filter: blur(8px);
 }
@@ -114,8 +114,8 @@
   border-radius: 1.1rem;
   background: var(--white);
   box-shadow:
-    0 0 0 0.5rem rgb(255 255 255 / 0.4),
-    0 50px 100px -40px rgb(16 45 60 / 0.45);
+    0 0 0 0.5rem rgb(var(--white-rgb) / 0.4),
+    0 50px 100px -40px rgb(var(--depth-rgb) / 0.45);
 }
 
 @media (max-width: 620px) {
