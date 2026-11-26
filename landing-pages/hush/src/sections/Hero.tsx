@@ -58,7 +58,7 @@ export function Hero({ config, apps }: { config: SiteConfig['hero']; apps: SiteC
             ))}
           </ul>
         </div>
-        <Picture image={config.screen} className="hero__screen" eager delay={0.4} />
+        <Picture image={config.screen} mobile={config.screenMobile} className="hero__screen" eager delay={0.4} />
       </div>
     </section>
   );

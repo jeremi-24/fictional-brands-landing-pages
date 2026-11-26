@@ -216,8 +216,66 @@ function Report({ t }: { t: Text }) {
   );
 }
 
+/** The same app on a phone: the suggestions come first, one under the other. */
+function Phone({ t }: { t: Text }) {
+  return (
+    <div className="s-phone">
+      <div>
+        <p className="s-phone__status">
+          <b>9:41</b>
+          <i />
+          <span />
+        </p>
+        <header>
+          <LogoMark />
+          <strong>Hush</strong>
+          <b>JM</b>
+        </header>
+        <p className="s-phone__won">
+          <span>
+            <h1>{t.week}</h1>
+            {t.range}
+          </span>
+          <strong>{t.won}</strong>
+        </p>
+        <ol>
+          {t.days.map((day, i) => (
+            <li key={day} className={i === 2 ? 'is-active' : ''}>
+              {day}
+              <b>{23 + i}</b>
+            </li>
+          ))}
+        </ol>
+        <p className="s-phone__agent">
+          <Agent />
+          {t.found}
+        </p>
+        {t.tips.map(([title, reason, action]) => (
+          <article key={title}>
+            <h3>{title}</h3>
+            <p>{reason}</p>
+            <div>
+              <span>{action}</span>
+              <span>{t.keep}</span>
+            </div>
+          </article>
+        ))}
+        <footer>{t.all}</footer>
+        <nav>
+          {RAIL.map((name, i) => (
+            <i key={name} className={i === 0 ? 'is-active' : ''}>
+              <Icon name={name} />
+            </i>
+          ))}
+        </nav>
+      </div>
+    </div>
+  );
+}
+
 export const SCREENS: Record<string, (props: { t: Text }) => ReactNode> = {
   app: App,
+  'app-mobile': Phone,
   skip: Skip,
   reply: Reply,
   focus: Day,

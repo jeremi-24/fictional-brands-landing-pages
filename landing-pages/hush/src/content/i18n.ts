@@ -25,6 +25,7 @@ const screen = (name: string, lang: 'fr' | 'de', alt: string) => ({ src: `/image
 
 const fr: DeepPartial<SiteConfig> = {
   nav: { links: [{ label: 'L’agent' }, { label: 'Fonctions' }, { label: 'Fonctionnement' }, { label: 'Confidentialité' }, { label: 'Tarifs' }], cta: 'Essai gratuit' },
+  lightbox: { close: 'Fermer l’aperçu' },
   hero: {
     kicker: 'Assistant d’agenda pour les équipes',
     title: ['Supprimez les réunions', 'inutiles.'],
@@ -33,6 +34,7 @@ const fr: DeepPartial<SiteConfig> = {
     primary: 'Commencer gratuitement',
     secondary: 'Découvrir l’agent',
     worksWith: 'Se branche sur',
+    screenMobile: screen('app-mobile', 'fr', 'L’application Hush sur téléphone : les heures gagnées et trois suggestions pour raccourcir ou décliner des réunions.'),
     screen: screen('app', 'fr', 'L’application Hush : un agenda de la semaine avec du temps de concentration, à côté de trois suggestions de réunions à raccourcir ou décliner.'),
   },
   apps: [{ name: 'Agenda' }, { name: 'E-mail' }],
@@ -50,7 +52,7 @@ const fr: DeepPartial<SiteConfig> = {
   },
   features: {
     eyebrow: 'Ce que vous gagnez',
-    title: 'Trois casse-tête en moins.',
+    title: 'Trois casse‑tête en moins.',
     items: [
       {
         title: 'Savoir quelles réunions éviter',
@@ -117,7 +119,8 @@ const fr: DeepPartial<SiteConfig> = {
 };
 
 const de: DeepPartial<SiteConfig> = {
-  nav: { links: [{ label: 'Der Agent' }, { label: 'Funktionen' }, { label: 'Ablauf' }, { label: 'Datenschutz' }, { label: 'Preise' }], cta: 'Gratis testen' },
+  nav: { links: [{ label: 'Der Agent' }, { label: 'Funktionen' }, { label: 'Ablauf' }, { label: 'Datenschutz' }, { label: 'Preise' }], cta: 'Gratis testen', menu: 'Menü' },
+  lightbox: { close: 'Vorschau schließen' },
   hero: {
     kicker: 'Kalenderassistent für Teams',
     title: ['Weg mit unnötigen', 'Meetings.'],
@@ -126,6 +129,7 @@ const de: DeepPartial<SiteConfig> = {
     primary: 'Kostenlos starten',
     secondary: 'Den Agenten kennenlernen',
     worksWith: 'Verbindet sich mit',
+    screenMobile: screen('app-mobile', 'de', 'Die Hush-App auf dem Handy: gewonnene Stunden und drei Vorschläge, Meetings zu kürzen oder abzusagen.'),
     screen: screen('app', 'de', 'Die Hush-App: ein Wochenkalender mit Fokuszeit, daneben drei Vorschläge, Meetings zu kürzen oder abzusagen.'),
   },
   apps: [{ name: 'Kalender' }, { name: 'E-Mail' }],

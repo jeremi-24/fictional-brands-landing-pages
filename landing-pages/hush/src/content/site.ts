@@ -21,7 +21,11 @@ export const site = {
       { label: 'Pricing', href: '#pricing' },
     ],
     cta: 'Try it free',
+    /** name of the menu button on phones */
+    menu: 'Menu',
   },
+  /** the large preview opened by clicking a picture */
+  lightbox: { close: 'Close preview' },
   hero: {
     kicker: 'Calendar assistant for teams',
     title: ['Cancel the meetings', 'you don’t need.'],
@@ -33,6 +37,8 @@ export const site = {
     worksWith: 'Works with your',
     /** the landscape behind the hero: a large file and a lighter one for small screens */
     background: { large: '/images/sky-2400.jpg', small: '/images/sky-1200.jpg' },
+    /** shown instead of the wide one on phones */
+    screenMobile: img('/images/screens/app-mobile-en.webp', 780, 1600, 'The Hush app on a phone: hours won back and three suggestions to shorten or skip meetings.'),
     screen: img('/images/screens/app-en.webp', 1920, 1120, 'The Hush app: a week calendar with focus time, next to three suggestions to shorten or skip meetings.'),
   },
   /** the apps Hush plugs into: keep this in step with the privacy section */

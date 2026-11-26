@@ -26,7 +26,7 @@
 /* two calm lines, the second one a shade lighter: no decoration to decode */
 .hero h1 {
   margin: 1.1rem auto 1.25rem;
-  font-size: clamp(2.5rem, 5.6vw, 4.6rem);
+  font-size: var(--text-hero);
   font-weight: 700;
   line-height: 1.04;
   letter-spacing: -0.035em;
@@ -69,7 +69,7 @@
   max-width: 40rem;
   margin: 0 auto;
   color: var(--ink-lead);
-  font-size: 1.15rem;
+  font-size: var(--text-lead);
 }
 .actions {
   display: flex;
@@ -87,7 +87,7 @@
   justify-content: center;
   gap: 0.6rem 1rem;
   margin: 1.5rem 0 2.5rem;
-  font-size: 0.85rem;
+  font-size: var(--text-small);
   font-weight: 600;
 }
 .works ul {
@@ -127,17 +127,28 @@
     0 50px 100px -40px rgb(var(--depth-rgb) / 0.45);
 }
 
+/* phone: the app picture is the phone version, shown as a phone */
+@media (max-width: 700px) {
+  .hero__screen {
+    width: min(84%, 20rem);
+    border-radius: 3.1rem;
+    background: none;
+    box-shadow: 0 40px 70px -35px rgb(var(--depth-rgb) / 0.6);
+  }
+}
+
 @media (max-width: 620px) {
   .hero {
-    padding-top: 5.75rem;
+    padding-top: 6rem;
+  }
+  /* one thumb-wide button per line */
+  .hero .actions {
+    flex-direction: column;
+  }
+  .hero .actions .btn {
+    width: 100%;
   }
   .works > span {
     width: 100%;
-  }
-  /* on a phone, show the calendar side of the app at a readable size */
-  .hero__screen {
-    height: 22rem;
-    object-fit: cover;
-    object-position: left top;
   }
 }

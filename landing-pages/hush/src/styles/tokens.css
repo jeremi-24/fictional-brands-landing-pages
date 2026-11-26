@@ -30,6 +30,8 @@
 
   /* lines, glass and depth */
   --line: rgb(var(--ink-rgb) / 0.1);
+  /* outline of white cards on the cream page */
+  --edge: rgb(var(--ink-rgb) / 0.15);
   --glass: rgb(var(--white-rgb) / 0.78);
   --glass-strong: rgb(var(--white-rgb) / 0.93);
   --shadow: 0 1px 2px rgb(var(--ink-rgb) / 0.06), 0 14px 40px -18px rgb(var(--ink-rgb) / 0.22);
@@ -38,6 +40,14 @@
   --display: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif;
   --body: 'Figtree', system-ui, sans-serif;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* type scale, from the loudest to the quietest: use nothing else for text sizes */
+  --text-hero: clamp(3.15rem, 5.6vw, 4.6rem);
+  --text-h2: clamp(2.3rem, 5vw, 3.8rem);
+  --text-h3: clamp(1.75rem, 3.2vw, 2.4rem);
+  --text-h4: clamp(1.3rem, 1.8vw, 1.45rem);
+  --text-lead: clamp(1.1875rem, 1.5vw, 1.25rem);
+  --text-body: 1.0625rem;
+  --text-small: 0.9375rem;
   /* air above every section; menu links jump past it */
   --section-space: clamp(3.5rem, 8vw, 6.25rem);
   color-scheme: light;

@@ -11,6 +11,7 @@ const PATHS = {
   search: 'M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM16 16l5 5',
   check: 'M4 12.5l5 5L20 6.5',
   cross: 'M6 6l12 12M18 6L6 18',
+  menu: 'M4 7h16M4 12h16M4 17h16',
   clock: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v5l3.5 2',
   note: 'M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h5',
 } as const;

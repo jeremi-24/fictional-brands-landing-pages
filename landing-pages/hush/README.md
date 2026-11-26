@@ -49,6 +49,7 @@ Every picture is a plain file, named in `src/content/site.ts`. Replace the file,
 | `images/apps/*.svg` | "Works with" icons | square |
 | `images/logos/*.svg` | "Trusted by" logos | 160 × 32 |
 | `images/screens/app-<lang>.webp` | The app in the hero | 1920 × 1120 |
+| `images/screens/app-mobile-<lang>.webp` | The same, on phones (screen up to 700 px) | 780 × 1600 |
 | `images/screens/skip-`, `reply-`, `focus-<lang>.webp` | The three feature pictures | 1024 × 864 |
 | `images/screens/report-<lang>.webp` | What the manager sees | 800 × 600 |
 | `images/steps/*.svg` | "How it works" illustrations (no text, animated) | 400 × 320 |

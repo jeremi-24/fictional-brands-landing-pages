@@ -1,17 +1,21 @@
 import type { SiteConfig } from '../content/site';
-import { Picture } from '../components/Picture';
 
+/** One row of logos that never stops: the list is written twice so the loop has no seam. */
 export function Companies({ config }: { config: SiteConfig['companies'] }) {
   return (
     <div className="companies wrap">
       <p data-reveal="">{config.label}</p>
-      <ul>
-        {config.logos.map((logo, i) => (
-          <li key={i}>
-            <Picture image={logo} reveal="" delay={i * 0.08} />
-          </li>
+      <div className="marquee" data-reveal="">
+        {[false, true].map((copy) => (
+          <ul key={String(copy)} aria-hidden={copy}>
+            {config.logos.map((logo, i) => (
+              <li key={i}>
+                <img {...logo} />
+              </li>
+            ))}
+          </ul>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

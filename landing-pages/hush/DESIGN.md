@@ -31,6 +31,18 @@ Derived: `--line`, `--glass`, `--glass-strong` and `--shadow`. For another trans
 
 Fonts are loaded in `index.html`: change both places together. So is the browser bar colour (`theme-color`).
 
+## Text sizes
+
+| Token | Use |
+|---|---|
+| `--text-hero` | The title of the page |
+| `--text-h2` | Section titles |
+| `--text-h3` | Benefit titles |
+| `--text-h4` | Card titles |
+| `--text-lead` | Introductions and large buttons |
+| `--text-body` | Text |
+| `--text-small` | Details and labels |
+
 ## Pictures
 
 Images cannot read these tokens. If you change the palette, redraw or replace the files in `public/images/`, `favicon.svg`, and follow the colour rules in [IMAGE_PROMPTS.md](IMAGE_PROMPTS.md) for photos.

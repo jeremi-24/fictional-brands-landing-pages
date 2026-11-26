@@ -24,7 +24,7 @@ export function Feel({ config }: { config: SiteConfig['feel'] }) {
             onFocus={() => setOpen(i)}
             onPointerEnter={() => setOpen(i)}
           >
-            <img {...m.photo} loading="lazy" />
+            <img {...m.photo} loading="lazy" data-zoom="" />
             <span className="strip__text">
               <strong>{m.feeling}</strong>
               <span>{m.text}</span>

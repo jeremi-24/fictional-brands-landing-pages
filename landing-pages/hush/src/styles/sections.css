@@ -4,19 +4,53 @@
   text-align: center;
 }
 .companies p {
+  font-size: var(--text-lead);
   font-weight: 600;
 }
-.companies ul {
+.marquee {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.75rem 2.5rem;
+  overflow: hidden;
   margin-top: 1.75rem;
+  mask-image: linear-gradient(90deg, transparent, var(--ink) 10%, var(--ink) 90%, transparent);
 }
-.companies img {
+.marquee ul {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 4rem;
+  padding-right: 4rem;
+  animation: marquee 28s linear infinite;
+}
+.marquee:hover ul {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    translate: -100% 0;
+  }
+}
+.marquee img {
   display: block;
-  width: 10rem;
+  width: 11.5rem;
+  max-width: none;
+}
+/* without motion: every logo, standing still */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    justify-content: center;
+    mask-image: none;
+  }
+  .marquee ul {
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2.5rem;
+    padding: 0;
+    animation: none;
+  }
+  .marquee ul[aria-hidden='true'] {
+    display: none;
+  }
 }
 
 /* ---------- the agent: one character, and what it gets done around it ---------- */
@@ -97,13 +131,13 @@
 }
 .task p {
   color: var(--soft);
-  font-size: 0.92rem;
+  font-size: var(--text-small);
   line-height: 1.35;
 }
 .task strong {
   display: block;
   color: var(--ink);
-  font: 700 1.1rem var(--display);
+  font: 700 var(--text-h4) / 1.25 var(--display);
 }
 
 /* ---------- features: words on one side, the picture on the other ---------- */
@@ -121,12 +155,13 @@
   order: 2;
 }
 .feature__text h3 {
-  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-size: var(--text-h3);
+  line-height: 1.08;
 }
 .feature__text > p {
   margin-top: 1rem;
   color: var(--soft);
-  font-size: 1.15rem;
+  font-size: var(--text-lead);
 }
 .ticks {
   display: grid;
@@ -182,7 +217,7 @@
   font: 800 1.05rem var(--display);
 }
 .how h3 {
-  font-size: 1.5rem;
+  font-size: var(--text-h4);
 }
 
 /* ---------- privacy: seen, never, and what the boss gets ---------- */
@@ -196,6 +231,7 @@
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
+  border: 1px solid var(--edge);
   border-radius: 1.75rem;
   background: var(--white);
   box-shadow: var(--shadow);
@@ -288,7 +324,7 @@
 }
 .strip__text strong {
   display: block;
-  font: 800 1.5rem/1.2 var(--display);
+  font: 800 var(--text-h4) / 1.2 var(--display);
 }
 .strip__text span {
   display: none;
@@ -312,7 +348,7 @@
   text-align: center;
 }
 .quote blockquote {
-  font: 600 clamp(1.8rem, 4.5vw, 3.2rem) / 1.15 var(--display);
+  font: 600 clamp(1.625rem, 4vw, 3rem) / 1.2 var(--display);
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
@@ -366,11 +402,12 @@
 }
 
 @media (max-width: 620px) {
-  .companies ul {
-    justify-content: center;
+  .marquee img {
+    width: 10.5rem;
   }
-  .companies img {
-    width: 8.5rem;
+  .marquee ul {
+    gap: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -381,6 +418,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    padding-bottom: 1.5rem;
   }
   .strip__card,
   .strip__card.is-open {
@@ -388,7 +426,9 @@
     flex: 0 0 85%;
     flex-direction: column;
     scroll-snap-align: center;
+    border: 1px solid var(--edge);
     background: var(--white);
+    box-shadow: var(--shadow);
   }
   .strip__card img {
     position: static;

@@ -13,6 +13,7 @@ import { Quote } from './sections/Quote';
 import { Pricing } from './sections/Pricing';
 import { Closing } from './sections/Closing';
 import { Footer } from './sections/Footer';
+import { Lightbox } from './components/Lightbox';
 
 /** Composes the page. Reorder, remove or duplicate sections here. */
 export function App() {
@@ -63,6 +64,7 @@ export function App() {
         <Closing config={c.closing} />
       </main>
       <Footer brand={c.brand} config={c.footer} />
+      <Lightbox close={c.lightbox.close} />
     </div>
   );
 }
