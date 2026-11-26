@@ -35,8 +35,8 @@ export const site = {
     background: { large: '/images/sky-2400.jpg', small: '/images/sky-1200.jpg' },
     screen: img('/images/screens/app-en.webp', 1920, 1120, 'The Hush app: a week calendar with focus time, next to three suggestions to shorten or skip meetings.'),
   },
-  /** the four kinds of apps Hush plugs into */
-  apps: [app('Calendar', 'calendar'), app('Mail', 'mail'), app('Video calls', 'video'), app('Team chat', 'chat')],
+  /** the apps Hush plugs into: keep this in step with the privacy section */
+  apps: [app('Calendar', 'calendar'), app('Mail', 'mail')],
   companies: {
     label: 'Trusted by teams that love a quiet week',
     logos: [logo('Quillfox'), logo('Marrowbay'), logo('Tandemoor'), logo('Pebblux'), logo('Vellumo')],
@@ -82,7 +82,7 @@ export const site = {
     eyebrow: 'How it works',
     title: 'From busy to quiet by Wednesday.',
     items: [
-      { time: 'Mon 08:00', title: 'Connect your calendar', image: img('/images/steps/connect.svg', 400, 320, 'Calendar, mail, video and chat flowing into Hush.') },
+      { time: 'Mon 08:00', title: 'Connect your calendar', image: img('/images/steps/connect.svg', 400, 320, 'Your calendar and your mail connected to Hush.') },
       { time: 'Mon 08:02', title: 'Decide in one click', image: img('/images/steps/decide.svg', 400, 320, 'One click declines a meeting; another is kept and a third shortened.') },
       { time: 'Wed 14:00', title: 'Enjoy the quiet', image: img('/images/steps/quiet.svg', 400, 320, 'A day with a large block of focus time, next to Hush wearing headphones.') },
     ],
@@ -92,7 +92,7 @@ export const site = {
     title: 'Your calendar stays yours.',
     body: 'Here is what Hush looks at, what it never does, and what your manager gets to see.',
     reads: { title: 'Hush looks at', items: ['Meeting titles', 'Times and length', 'Guest list and agenda'] },
-    never: { title: 'Hush never', items: ['Joins or records a meeting', 'Sends or declines without your yes', 'Shows your meetings to your boss'] },
+    never: { title: 'Hush never', items: ['Joins or records a meeting', 'Reads your messages', 'Sends or declines without your yes', 'Shows your meetings to your boss'] },
     manager: {
       title: 'Your manager sees',
       image: img('/images/screens/report-en.webp', 800, 600, 'Design team: 31 hours won back this month. No names, no meeting titles.'),

@@ -35,7 +35,7 @@ const fr: DeepPartial<SiteConfig> = {
     worksWith: 'Se branche sur',
     screen: screen('app', 'fr', 'L’application Hush : un agenda de la semaine avec du temps de concentration, à côté de trois suggestions de réunions à raccourcir ou décliner.'),
   },
-  apps: [{ name: 'Agenda' }, { name: 'E-mail' }, { name: 'Visio' }, { name: 'Messagerie' }],
+  apps: [{ name: 'Agenda' }, { name: 'E-mail' }],
   companies: { label: 'La confiance des équipes qui aiment les semaines calmes' },
   agent: {
     eyebrow: 'Hush, votre agent',
@@ -76,7 +76,7 @@ const fr: DeepPartial<SiteConfig> = {
     eyebrow: 'Comment ça marche',
     title: 'Du trop-plein au calme dès mercredi.',
     items: [
-      { time: 'Lun 08:00', title: 'Connectez votre agenda', image: { alt: 'Agenda, e-mail, visio et messagerie reliés à Hush.' } },
+      { time: 'Lun 08:00', title: 'Connectez votre agenda', image: { alt: 'Votre agenda et votre e-mail reliés à Hush.' } },
       { time: 'Lun 08:02', title: 'Décidez en un clic', image: { alt: 'Un clic décline une réunion ; une autre est gardée et une troisième raccourcie.' } },
       { time: 'Mer 14:00', title: 'Profitez du calme', image: { alt: 'Une journée avec un grand créneau de concentration, à côté de Hush casque sur les oreilles.' } },
     ],
@@ -86,7 +86,7 @@ const fr: DeepPartial<SiteConfig> = {
     title: 'Votre agenda reste à vous.',
     body: 'Voici ce que Hush regarde, ce qu’il ne fait jamais, et ce que voit votre responsable.',
     reads: { title: 'Hush regarde', items: ['Les titres des réunions', 'Les horaires et la durée', 'Les invités et l’ordre du jour'] },
-    never: { title: 'Hush ne fait jamais', items: ['Rejoindre ou enregistrer une réunion', 'Envoyer ou refuser sans votre accord', 'Montrer vos réunions à votre chef'] },
+    never: { title: 'Hush ne fait jamais', items: ['Rejoindre ou enregistrer une réunion', 'Lire vos messages', 'Envoyer ou refuser sans votre accord', 'Montrer vos réunions à votre chef'] },
     manager: { title: 'Votre responsable voit', image: screen('report', 'fr', 'Équipe design : 31 heures gagnées ce mois-ci. Aucun nom, aucun titre de réunion.'), consent: 'Seulement si l’équipe accepte' },
   },
   feel: {
@@ -128,7 +128,7 @@ const de: DeepPartial<SiteConfig> = {
     worksWith: 'Verbindet sich mit',
     screen: screen('app', 'de', 'Die Hush-App: ein Wochenkalender mit Fokuszeit, daneben drei Vorschläge, Meetings zu kürzen oder abzusagen.'),
   },
-  apps: [{ name: 'Kalender' }, { name: 'E-Mail' }, { name: 'Videocalls' }, { name: 'Team-Chat' }],
+  apps: [{ name: 'Kalender' }, { name: 'E-Mail' }],
   companies: { label: 'Teams, die ruhige Wochen lieben, vertrauen uns' },
   agent: {
     eyebrow: 'Hush, dein Agent',
@@ -169,7 +169,7 @@ const de: DeepPartial<SiteConfig> = {
     eyebrow: 'So funktioniert es',
     title: 'Bis Mittwoch von voll zu ruhig.',
     items: [
-      { time: 'Mo 08:00', title: 'Kalender verbinden', image: { alt: 'Kalender, E-Mail, Video und Chat laufen bei Hush zusammen.' } },
+      { time: 'Mo 08:00', title: 'Kalender verbinden', image: { alt: 'Dein Kalender und deine E-Mail sind mit Hush verbunden.' } },
       { time: 'Mo 08:02', title: 'Mit einem Klick entscheiden', image: { alt: 'Ein Klick sagt ein Meeting ab; eines bleibt, ein drittes wird gekürzt.' } },
       { time: 'Mi 14:00', title: 'Die Ruhe genießen', image: { alt: 'Ein Tag mit einem großen Fokusblock, daneben Hush mit Kopfhörern.' } },
     ],
@@ -179,7 +179,7 @@ const de: DeepPartial<SiteConfig> = {
     title: 'Dein Kalender bleibt deiner.',
     body: 'Das sieht sich Hush an, das tut es nie, und das sieht deine Führungskraft.',
     reads: { title: 'Hush sieht sich an', items: ['Titel der Meetings', 'Uhrzeit und Dauer', 'Gästeliste und Agenda'] },
-    never: { title: 'Hush tut nie', items: ['Einem Meeting beitreten oder mitschneiden', 'Ohne dein Ja senden oder absagen', 'Deine Meetings der Chefetage zeigen'] },
+    never: { title: 'Hush tut nie', items: ['Einem Meeting beitreten oder mitschneiden', 'Deine Nachrichten lesen', 'Ohne dein Ja senden oder absagen', 'Deine Meetings der Chefetage zeigen'] },
     manager: { title: 'Deine Führungskraft sieht', image: screen('report', 'de', 'Designteam: 31 Stunden diesen Monat gewonnen. Keine Namen, keine Meetingtitel.'), consent: 'Nur wenn das Team zustimmt' },
   },
   feel: {

@@ -4,7 +4,9 @@ A bright SaaS landing page for a product that does not exist: a calendar assista
 
 Built with **React 19, TypeScript and Vite**. No animation or icon library.
 
-![Hush landing page](../../previews/hush.jpg)
+**Live: [hush-vert.vercel.app](https://hush-vert.vercel.app)**
+
+[![Hush landing page](../../previews/hush.jpg)](https://hush-vert.vercel.app)
 
 ## Inside the page
 
@@ -41,6 +43,7 @@ Every picture is a plain file, named in `src/content/site.ts`. Replace the file,
 |---|---|---|
 | `images/brand/logo.svg` | Logo next to the name | square |
 | `favicon.svg` | Browser tab icon | square |
+| `og-image.jpg` | Preview shown when the link is shared (set its address in `index.html`) | 1200 × 630 |
 | `images/brand/agent.svg` | The agent (agent section and closing block) | square |
 | `images/sky-2400.jpg`, `sky-1200.jpg` | Landscape behind the hero (and the agent) | 12:7 |
 | `images/apps/*.svg` | "Works with" icons | square |

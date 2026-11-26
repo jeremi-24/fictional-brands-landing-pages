@@ -23,7 +23,7 @@ Free to use, MIT licensed.
           <img src="previews/hush.jpg" alt="Hush: the hero, with the meeting assistant app" width="700">
         </a>
       </td>
-      <td><strong><a href="landing-pages/hush">Hush</a></strong></td>
+      <td><strong><a href="landing-pages/hush">Hush</a></strong> · <a href="https://hush-vert.vercel.app">Live</a></td>
       <td>A calendar assistant that cuts useless meetings, with its own quiet agent.</td>
     </tr>
     <tr>
