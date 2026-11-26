@@ -27,9 +27,13 @@
     animation-play-state: paused;
   }
 }
+/* both ends written out, with transform: Safari can stay still on an implied `translate` */
 @keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
   to {
-    translate: -100% 0;
+    transform: translateX(-100%);
   }
 }
 .marquee img {
@@ -97,6 +101,9 @@
   animation: float 5s ease-in-out infinite alternate;
 }
 @keyframes float {
+  from {
+    translate: 0 0;
+  }
   to {
     translate: 0 -12px;
   }
