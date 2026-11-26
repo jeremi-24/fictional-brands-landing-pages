@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import type { SiteConfig, Theme } from './content/types';
 import { initialLang, localize, type Lang } from './content/i18n';
 import { usePageMotion } from './hooks/usePageMotion';
@@ -61,6 +62,7 @@ export function App({ site }: { site: SiteConfig }) {
       </main>
       <Footer brand={config.brand} config={config.footer} />
       <AuraCursor />
+      <Analytics />
     </div>
   );
 }

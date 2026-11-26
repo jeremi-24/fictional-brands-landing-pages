@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { site } from './content/site';
 import { initialLang, localize, type Lang } from './content/i18n';
 import { Nav } from './sections/Nav';
@@ -65,6 +66,7 @@ export function App() {
       </main>
       <Footer brand={c.brand} config={c.footer} />
       <Lightbox close={c.lightbox.close} />
+      <Analytics />
     </div>
   );
 }
