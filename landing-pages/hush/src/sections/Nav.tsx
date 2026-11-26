@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
-import type { SiteConfig } from '../content/site';
+import type { SiteConfig, SiteImage } from '../content/site';
 import { LANGS, type Lang } from '../content/i18n';
-import { LogoMark } from '../components/Logo';
 
 interface Props {
   brand: string;
+  logo: SiteImage;
   config: SiteConfig['nav'];
   lang: Lang;
   onLang: (lang: Lang) => void;
 }
 
-export function Nav({ brand, config, lang, onLang }: Props) {
+export function Nav({ brand, logo, config, lang, onLang }: Props) {
   // at the top the bar is part of the hero; once the page moves it becomes a floating pill
   const [stuck, setStuck] = useState(false);
   useEffect(() => {
@@ -23,7 +23,7 @@ export function Nav({ brand, config, lang, onLang }: Props) {
   return (
     <header className={`nav ${stuck ? 'is-stuck' : ''}`}>
       <a href="#top" className="logo">
-        <LogoMark />
+        <img {...logo} className="logo-mark" />
         {brand}
       </a>
       <nav className="nav__links" aria-label="Primary">

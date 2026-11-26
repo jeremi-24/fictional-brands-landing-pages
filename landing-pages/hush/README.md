@@ -31,20 +31,27 @@ Open http://localhost:5173.
 
 ## Use your own pictures
 
-Every screen, logo and photo is a plain file. Replace it, or change its path in `src/content/site.ts` (and `i18n.ts` for translated screens).
+Every picture is a plain file, named in `src/content/site.ts`. Replace the file, or change its path there.
 
-| Folder in `public/images/` | What | Size |
+| In `public/` | What | Size |
 |---|---|---|
-| `screens/app-<lang>.webp` | The app in the hero | 1920 × 1120 |
-| `screens/skip-`, `reply-`, `focus-<lang>.webp` | The three feature pictures | 1024 × 864 |
-| `screens/report-<lang>.webp` | What the manager sees | 800 × 600 |
-| `logos/*.svg` | "Trusted by" logos | 160 × 32 |
-| `steps/*.svg` | The three "how it works" illustrations (no text, animated) | 400 × 320 |
-| `photos/focus.webp`, `lunch.webp`, `evening.webp` | Photos of people (prompts in [IMAGE_PROMPTS.md](IMAGE_PROMPTS.md)) | 2:1, 720 × 360 or larger |
+| `images/brand/logo.svg` | Logo next to the name | square |
+| `favicon.svg` | Browser tab icon | square |
+| `images/brand/agent.svg` | The agent (agent section and closing block) | square |
+| `images/sky-2400.jpg`, `sky-1200.jpg` | Landscape behind the hero (and the agent) | 12:7 |
+| `images/apps/*.svg` | "Works with" icons | square |
+| `images/logos/*.svg` | "Trusted by" logos | 160 × 32 |
+| `images/screens/app-<lang>.webp` | The app in the hero | 1920 × 1120 |
+| `images/screens/skip-`, `reply-`, `focus-<lang>.webp` | The three feature pictures | 1024 × 864 |
+| `images/screens/report-<lang>.webp` | What the manager sees | 800 × 600 |
+| `images/steps/*.svg` | "How it works" illustrations (no text, animated) | 400 × 320 |
+| `images/photos/focus.webp`, `lunch.webp`, `evening.webp` | Photos of people (prompts in [IMAGE_PROMPTS.md](IMAGE_PROMPTS.md)) | 2:1, 720 × 360 or larger |
 
-Keep the `width`, `height` and `alt` in `site.ts` in step with your files.
+Keep the `width`, `height` and `alt` in `site.ts` in step with your files. `npm test` checks that every named picture exists.
 
-The sample screens are drawn in `src/screens/`. To redraw one, run `npm run dev`, open `/screens.html?screen=app&lang=en` and capture the `#shot` element. That page is not part of the production build.
+Only small interface symbols (ticks, crosses, task icons) are drawn in code, in `src/components/Icon.tsx`.
+
+The app screens contain text, so there is one per language. They also show the logo and the agent, as do `steps/connect.svg` (logo) and `steps/quiet.svg` (agent): redraw those pictures after changing either. Their source is in `src/screens/`: run `npm run dev`, open `/screens.html?screen=app&lang=en` and capture the `#shot` element. That page is not part of the production build.
 
 ## Customize
 

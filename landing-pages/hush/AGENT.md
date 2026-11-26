@@ -8,7 +8,7 @@ Hush is the part of the product that does the work: it looks at the week, prepar
 
 ## Look
 
-A line drawing: curly hair, lime headphones, eyes closed, a small smile. The headphones are its signature: it works in quiet, so you can too. Code: `src/components/Agent.tsx`.
+A line drawing: curly hair, lime headphones, eyes closed, a small smile. The headphones are its signature: it works in quiet, so you can too. File: `public/images/brand/agent.svg`.
 
 | Colour | Use |
 |---|---|

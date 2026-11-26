@@ -17,9 +17,6 @@ const PATHS = {
 
 export type IconName = keyof typeof PATHS;
 
-/** the order matches `site.apps`: calendar, mail, video calls, team chat */
-export const APP_ICONS: IconName[] = ['calendar', 'mail', 'video', 'chat'];
-
 export function Icon({ name }: { name: IconName }) {
   return (
     <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

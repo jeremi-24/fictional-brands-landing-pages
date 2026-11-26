@@ -1,6 +1,5 @@
 import type { CSSProperties } from 'react';
 import type { SiteConfig } from '../content/site';
-import { APP_ICONS, Icon } from '../components/Icon';
 import { Picture } from '../components/Picture';
 
 /** Each line of the hero arrives a beat after the previous one. */
@@ -22,8 +21,14 @@ function Line({ text, strike }: { text: string; strike: string }) {
 export function Hero({ config, apps }: { config: SiteConfig['hero']; apps: SiteConfig['apps'] }) {
   return (
     <section className="hero">
-      {/* generated from code, see the project README */}
-      <img className="hero__sky" src="/images/sky-2400.jpg" srcSet="/images/sky-1200.jpg 1200w, /images/sky-2400.jpg 2400w" sizes="(max-width: 700px) 200vw, 100vw" alt="" fetchPriority="high" />
+      <img
+        className="hero__sky"
+        src={config.background.large}
+        srcSet={`${config.background.small} 1200w, ${config.background.large} 2400w`}
+        sizes="(max-width: 700px) 200vw, 100vw"
+        alt=""
+        fetchPriority="high"
+      />
       <div className="wrap">
         <p className="pill" {...after(0)}>
           {config.kicker}
@@ -46,9 +51,9 @@ export function Hero({ config, apps }: { config: SiteConfig['hero']; apps: SiteC
           <span>{config.worksWith}</span>
           <ul>
             {apps.map((app, i) => (
-              <li key={i} className={`app-icon app-icon--${APP_ICONS[i]}`}>
-                <Icon name={APP_ICONS[i]} />
-                {app}
+              <li key={i}>
+                <img {...app.icon} />
+                {app.name}
               </li>
             ))}
           </ul>

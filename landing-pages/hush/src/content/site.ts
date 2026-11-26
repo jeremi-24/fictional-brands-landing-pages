@@ -6,9 +6,12 @@
 
 const img = (src: string, width: number, height: number, alt: string) => ({ src, width, height, alt });
 const logo = (name: string) => img(`/images/logos/${name.toLowerCase()}.svg`, 160, 32, name);
+const app = (name: string, file: string) => ({ name, icon: img(`/images/apps/${file}.svg`, 24, 24, '') });
 
 export const site = {
   brand: 'Hush',
+  /** next to the brand name; the browser tab icon is public/favicon.svg */
+  logo: img('/images/brand/logo.svg', 32, 32, ''),
   nav: {
     links: [
       { label: 'Your agent', href: '#agent' },
@@ -28,16 +31,20 @@ export const site = {
     primary: 'Start free',
     secondary: 'Meet your agent',
     worksWith: 'Works with your',
+    /** the landscape behind the hero: a large file and a lighter one for small screens */
+    background: { large: '/images/sky-2400.jpg', small: '/images/sky-1200.jpg' },
     screen: img('/images/screens/app-en.webp', 1920, 1120, 'The Hush app: a week calendar with focus time, next to three suggestions to shorten or skip meetings.'),
   },
   /** the four kinds of apps Hush plugs into */
-  apps: ['Calendar', 'Mail', 'Video calls', 'Team chat'],
+  apps: [app('Calendar', 'calendar'), app('Mail', 'mail'), app('Video calls', 'video'), app('Team chat', 'chat')],
   companies: {
     label: 'Trusted by teams that love a quiet week',
     logos: [logo('Quillfox'), logo('Marrowbay'), logo('Tandemoor'), logo('Pebblux'), logo('Vellumo')],
   },
   agent: {
     eyebrow: 'Hush, your agent',
+    image: img('/images/brand/agent.svg', 448, 448, 'Hush, the agent: headphones on, eyes closed.'),
+    background: img('/images/sky-1200.jpg', 1200, 700, ''),
     title: ['You say yes.', 'Hush does the work.'],
     /** shown around the agent, in this order */
     tasks: [
@@ -130,6 +137,7 @@ export const site = {
   closing: {
     title: 'Your calendar can be quieter by Friday.',
     cta: 'Start free',
+    image: img('/images/brand/agent.svg', 448, 448, ''),
   },
   footer: {
     tagline: 'Hush is a fictional product. No calendar is connected and nothing is sold.',

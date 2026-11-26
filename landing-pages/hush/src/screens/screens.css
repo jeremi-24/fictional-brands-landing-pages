@@ -440,15 +440,3 @@ ul {
   font-weight: 700;
 }
 
-/* ---------- the agent check sheet ---------- */
-.s-mascot {
-  display: flex;
-  justify-content: center;
-  width: 420px;
-  padding: 30px;
-  background: #f1f2ee;
-}
-.s-mascot .agent {
-  width: 340px;
-  height: 340px;
-}

@@ -4,10 +4,11 @@
  * Replacing the image files is enough: nothing here is part of the page.
  */
 import type { CSSProperties, ReactNode } from 'react';
-import { Agent } from '../components/Agent';
 import { Icon, type IconName } from '../components/Icon';
-import { LogoMark } from '../components/Logo';
 import type { Text } from './text';
+
+const Agent = () => <img className="agent" src="/images/brand/agent.svg" alt="" />;
+const LogoMark = () => <img className="logo-mark" src="/images/brand/logo.svg" alt="" />;
 
 /** [day column, start hour, hours, event text index or -1 for focus, kind] */
 const EVENTS: [number, number, number, number, string][] = [
@@ -215,18 +216,10 @@ function Report({ t }: { t: Text }) {
   );
 }
 
-/** The agent on its own, to check the drawing. */
-const Mascot = () => (
-  <div className="s-mascot">
-    <Agent />
-  </div>
-);
-
 export const SCREENS: Record<string, (props: { t: Text }) => ReactNode> = {
   app: App,
   skip: Skip,
   reply: Reply,
   focus: Day,
   report: Report,
-  agent: Mascot,
 };

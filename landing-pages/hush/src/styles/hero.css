@@ -87,6 +87,10 @@
   justify-content: center;
   gap: 0.5rem;
 }
+.works li img {
+  width: 1.15rem;
+  height: 1.15rem;
+}
 .works li {
   display: flex;
   align-items: center;
@@ -102,19 +106,6 @@
   width: 1.15em;
   height: 1.15em;
 }
-.app-icon--calendar .icon {
-  color: #1f6fd1;
-}
-.app-icon--mail .icon {
-  color: #d6452f;
-}
-.app-icon--video .icon {
-  color: #0f8a5f;
-}
-.app-icon--chat .icon {
-  color: #7347c9;
-}
-
 /* the app picture, framed in soft glass */
 .hero__screen {
   display: block;

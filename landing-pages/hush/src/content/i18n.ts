@@ -35,10 +35,11 @@ const fr: DeepPartial<SiteConfig> = {
     worksWith: 'Se branche sur',
     screen: screen('app', 'fr', 'L’application Hush : un agenda de la semaine avec du temps de concentration, à côté de trois suggestions de réunions à raccourcir ou décliner.'),
   },
-  apps: ['Agenda', 'E-mail', 'Visio', 'Messagerie'],
+  apps: [{ name: 'Agenda' }, { name: 'E-mail' }, { name: 'Visio' }, { name: 'Messagerie' }],
   companies: { label: 'La confiance des équipes qui aiment les semaines calmes' },
   agent: {
     eyebrow: 'Hush, votre agent',
+    image: { alt: 'Hush, l’agent : casque sur les oreilles, yeux fermés.' },
     title: ['Vous dites oui.', 'Hush fait le travail.'],
     tasks: [
       { title: 'Lit votre semaine', detail: '9 réunions vérifiées lundi matin' },
@@ -127,10 +128,11 @@ const de: DeepPartial<SiteConfig> = {
     worksWith: 'Verbindet sich mit',
     screen: screen('app', 'de', 'Die Hush-App: ein Wochenkalender mit Fokuszeit, daneben drei Vorschläge, Meetings zu kürzen oder abzusagen.'),
   },
-  apps: ['Kalender', 'E-Mail', 'Videocalls', 'Team-Chat'],
+  apps: [{ name: 'Kalender' }, { name: 'E-Mail' }, { name: 'Videocalls' }, { name: 'Team-Chat' }],
   companies: { label: 'Teams, die ruhige Wochen lieben, vertrauen uns' },
   agent: {
     eyebrow: 'Hush, dein Agent',
+    image: { alt: 'Hush, der Agent: Kopfhörer auf, Augen geschlossen.' },
     title: ['Du sagst Ja.', 'Hush erledigt den Rest.'],
     tasks: [
       { title: 'Liest deine Woche', detail: '9 Meetings am Montagmorgen geprüft' },

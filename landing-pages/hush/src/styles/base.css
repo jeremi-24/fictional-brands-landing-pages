@@ -321,12 +321,6 @@ img {
   height: auto;
 }
 
-/* ---------- the agent ---------- */
-.agent {
-  flex: none;
-  width: 3rem;
-  height: 3rem;
-}
 /* ---------- smaller screens ---------- */
 @media (max-width: 1060px) {
   .nav__links {

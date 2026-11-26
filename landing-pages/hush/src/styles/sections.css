@@ -30,7 +30,7 @@
   gap: 1.5rem clamp(1rem, 4vw, 3.5rem);
   padding: clamp(1.25rem, 5vw, 4rem);
   border-radius: 2.25rem;
-  background: url('/images/sky-1200.jpg') center 35% / cover;
+  background: var(--backdrop) center 35% / cover;
 }
 .work__agent {
   grid-area: mid;
@@ -38,7 +38,7 @@
   place-items: center;
   width: clamp(11rem, 22vw, 17rem);
 }
-.work__agent .agent {
+.work__agent img {
   width: 100%;
   height: auto;
   animation: float 5s ease-in-out infinite alternate;
@@ -319,7 +319,7 @@
 .closing h2 {
   max-width: 18ch;
 }
-.closing .agent {
+.closing img {
   width: 8rem;
   height: 8rem;
 }

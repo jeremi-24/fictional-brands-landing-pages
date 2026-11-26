@@ -49,7 +49,7 @@ export function App() {
 
   return (
     <div id="top">
-      <Nav brand={c.brand} config={c.nav} lang={lang} onLang={setLang} />
+      <Nav brand={c.brand} logo={c.logo} config={c.nav} lang={lang} onLang={setLang} />
       <main>
         <Hero config={c.hero} apps={c.apps} />
         <Companies config={c.companies} />

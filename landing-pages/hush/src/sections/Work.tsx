@@ -1,6 +1,5 @@
 import type { CSSProperties } from 'react';
 import type { SiteConfig } from '../content/site';
-import { Agent } from '../components/Agent';
 import { Icon, type IconName } from '../components/Icon';
 
 /** One icon per task, in the order of `agent.tasks`. */
@@ -18,9 +17,9 @@ export function Work({ config }: { config: SiteConfig['agent'] }) {
           {config.title[1]}
         </h2>
       </header>
-      <div className="work__stage" data-reveal="zoom">
+      <div className="work__stage" data-reveal="zoom" style={{ '--backdrop': `url(${config.background.src})` } as CSSProperties}>
         <div className="work__agent">
-          <Agent />
+          <img {...config.image} loading="lazy" />
         </div>
         {config.tasks.map((task, i) => (
           <article key={i} className="task" data-reveal="" style={{ '--d': `${0.35 + i * 0.35}s` } as CSSProperties}>
