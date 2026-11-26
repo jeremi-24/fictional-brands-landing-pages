@@ -12,6 +12,10 @@ Built with **React 19, TypeScript, Vite and Three.js**.
 
 AUREN is a fictional skincare brand built around a simple idea: less information, stronger visuals and an immersive product experience.
 
+## Inside the page
+
+![AUREN sections: the aura reveal, the 3D bottle, the benefits and the purchase block](docs/sections.jpg)
+
 ## Lighthouse
 
 Measured with PageSpeed Insights on the live site.

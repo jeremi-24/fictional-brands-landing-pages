@@ -38,20 +38,6 @@ Free to use, MIT licensed.
   </tbody>
 </table>
 
-## Inside the pages
-
-### Hush
-
-[![Hush sections: the agent, the benefits, how it works and how a quieter week feels](previews/hush-sections.jpg)](landing-pages/hush)
-
-A bright SaaS page. The word "meetings" gets crossed out in the title, the agent's jobs arrive one by one, three animated illustrations explain the product, and every picture is a file you can swap.
-
-### AUREN
-
-[![AUREN sections: the aura reveal, the 3D bottle, the benefits and the purchase block](previews/auren-sections.jpg)](landing-pages/auren)
-
-An editorial skincare page. "Aura renewed" turns into the brand name, a 3D bottle follows the scroll, and a before and after slider shows the benefits.
-
 ## Run locally
 
 Each folder in `landing-pages/` is an independent project. Requires Node.js 20+.

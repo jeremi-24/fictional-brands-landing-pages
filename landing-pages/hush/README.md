@@ -6,6 +6,10 @@ Built with **React 19, TypeScript and Vite**. No animation or icon library.
 
 ![Hush landing page](../../previews/hush.jpg)
 
+## Inside the page
+
+![Hush sections: the agent, the benefits, how it works and how a quieter week feels](docs/sections.jpg)
+
 ## Getting started
 
 ```bash
