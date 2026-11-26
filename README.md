@@ -26,6 +26,15 @@ Free to use, MIT licensed.
       <td><strong><a href="landing-pages/auren">AUREN</a></strong> · <a href="https://auren-serum.vercel.app">Live</a></td>
       <td>Luxury skincare with an immersive 3D serum experience.</td>
     </tr>
+    <tr>
+      <td>
+        <a href="landing-pages/hush">
+          <img src="previews/hush.jpg" alt="Hush landing page preview" width="700">
+        </a>
+      </td>
+      <td><strong><a href="landing-pages/hush">Hush</a></strong></td>
+      <td>A calendar assistant that cuts useless meetings, with its own quiet agent.</td>
+    </tr>
   </tbody>
 </table>
 

@@ -1,0 +1,143 @@
+/* ---------- hero: sky, promise, then the app ---------- */
+.hero {
+  position: relative;
+  isolation: isolate;
+  padding: 7.5rem 0 1rem;
+  text-align: center;
+}
+.hero__sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: min(57rem, 100%);
+  object-fit: cover;
+  object-position: 50% 100%;
+  mask-image: linear-gradient(#000 78%, transparent);
+}
+/* two calm lines, the second one a shade lighter: no decoration to decode */
+.hero h1 {
+  margin: 1.1rem auto 1.25rem;
+  font-size: clamp(2.5rem, 5.6vw, 4.6rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+.hero h1 span {
+  display: block;
+}
+.hero h1 span + span {
+  color: #2d5f4b;
+}
+/* the cancelled word: a red stroke drawn across it once the title has landed */
+.struck {
+  position: relative;
+  font-style: normal;
+  white-space: nowrap;
+}
+.struck::after {
+  content: '';
+  position: absolute;
+  top: 0.55em;
+  right: -0.05em;
+  left: -0.05em;
+  height: 0.11em;
+  border-radius: 1em;
+  background: #e8432c;
+  rotate: -3deg;
+  animation: strike 0.55s 1s var(--ease) both;
+}
+@keyframes strike {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+.lead {
+  max-width: 40rem;
+  margin: 0 auto;
+  color: #23372f;
+  font-size: 1.15rem;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+/* the apps Hush plugs into */
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem 1rem;
+  margin: 1.5rem 0 2.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.works ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.works li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem 0.4rem 0.6rem;
+  border-radius: 99px;
+  background: rgb(255 255 255 / 0.78);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+.icon {
+  flex: none;
+  width: 1.15em;
+  height: 1.15em;
+}
+.app-icon--calendar .icon {
+  color: #1f6fd1;
+}
+.app-icon--mail .icon {
+  color: #d6452f;
+}
+.app-icon--video .icon {
+  color: #0f8a5f;
+}
+.app-icon--chat .icon {
+  color: #7347c9;
+}
+
+/* the app picture, framed in soft glass */
+.hero__screen {
+  display: block;
+  width: min(100%, 72rem);
+  margin: 0 auto;
+  border-radius: 1.1rem;
+  background: var(--white);
+  box-shadow:
+    0 0 0 0.5rem rgb(255 255 255 / 0.4),
+    0 50px 100px -40px rgb(16 45 60 / 0.45);
+}
+
+@media (max-width: 620px) {
+  .hero {
+    padding-top: 5.75rem;
+  }
+  .works > span {
+    width: 100%;
+  }
+  /* on a phone, show the calendar side of the app at a readable size */
+  .hero__screen {
+    height: 22rem;
+    object-fit: cover;
+    object-position: left top;
+  }
+}

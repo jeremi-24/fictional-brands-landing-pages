@@ -1,0 +1,22 @@
+/**
+ * Hush, the one agent: curly hair, green headphones on, eyes closed, in no hurry.
+ * It works quietly and never talks over anyone. See AGENT.md.
+ */
+export function Agent() {
+  return (
+    <svg className="agent" viewBox="6 0 112 112" fill="none" stroke="#10231c" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M31 56c0-21 13-31 31-31s31 12 31 34c0 30-14 47-31 47S31 87 31 56z" fill="#fff" />
+      <path
+        d="M29 67C17 55 18 40 26 33c-3-11 9-21 19-17 5-11 24-13 31-3 11-6 25 3 23 15 11 5 13 25-4 40-1-11-4-19-11-25-9 6-24 5-30-8-4 11-13 17-22 18-1 5-2 9-3 14z"
+        fill="#10231c"
+      />
+      {/* headphones: a dark band with the lime running through it */}
+      <path d="M23 62C15 -2 109 -2 101 62" strokeWidth="9" />
+      <path d="M23 62C15 -2 109 -2 101 62" stroke="#d7f54a" strokeWidth="3.6" />
+      <rect x="13" y="55" width="19" height="32" rx="9.5" fill="#d7f54a" />
+      <rect x="92" y="55" width="19" height="32" rx="9.5" fill="#d7f54a" />
+      {/* brows, closed eyes, a short soft nose, a small smile */}
+      <path d="M42 59q8-6 15-1M69 57q8-4 14 2M43 68q6.5 6 13 0M70 68q6.5 6 13 0M61 74q2 5 6 3M53 90q9 7 19-1" />
+    </svg>
+  );
+}

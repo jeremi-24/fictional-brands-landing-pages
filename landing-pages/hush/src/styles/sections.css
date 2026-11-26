@@ -1,0 +1,352 @@
+/* ---------- trusted by: one quiet row of grey logos ---------- */
+.companies {
+  padding-top: 4.5rem;
+  text-align: center;
+}
+.companies p {
+  font-weight: 600;
+}
+.companies ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem 2.5rem;
+  margin-top: 1.75rem;
+}
+.companies img {
+  display: block;
+  width: 10rem;
+}
+
+/* ---------- the agent: one character, and what it gets done around it ---------- */
+.work__stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-areas:
+    'a mid b'
+    'c mid d';
+  align-items: center;
+  gap: 1.5rem clamp(1rem, 4vw, 3.5rem);
+  padding: clamp(1.25rem, 5vw, 4rem);
+  border-radius: 2.25rem;
+  background: url('/images/sky-1200.jpg') center 35% / cover;
+}
+.work__agent {
+  grid-area: mid;
+  display: grid;
+  place-items: center;
+  width: clamp(11rem, 22vw, 17rem);
+}
+.work__agent .agent {
+  width: 100%;
+  height: auto;
+  animation: float 5s ease-in-out infinite alternate;
+}
+@keyframes float {
+  to {
+    translate: 0 -12px;
+  }
+}
+.task {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: 1.25rem;
+  background: rgb(255 255 255 / 0.92);
+  box-shadow: 0 24px 50px -28px rgb(16 45 60 / 0.55);
+}
+.task:nth-of-type(1) {
+  grid-area: a;
+}
+.task:nth-of-type(2) {
+  grid-area: b;
+}
+.task:nth-of-type(3) {
+  grid-area: c;
+}
+.task:nth-of-type(4) {
+  grid-area: d;
+}
+.task i {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 0.85rem;
+  background: var(--lime);
+  font-size: 1.25rem;
+}
+.task p {
+  color: var(--soft);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+.task strong {
+  display: block;
+  color: var(--ink);
+  font: 700 1.1rem var(--display);
+}
+
+/* ---------- features: words on one side, the picture on the other ---------- */
+.features {
+  display: grid;
+  gap: clamp(3.5rem, 8vw, 6rem);
+}
+.feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+.feature:nth-child(even) .feature__text {
+  order: 2;
+}
+.feature__text h3 {
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+}
+.feature__text > p {
+  margin-top: 1rem;
+  color: var(--soft);
+  font-size: 1.15rem;
+}
+.ticks {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+.ticks li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.ticks .icon {
+  box-sizing: content-box;
+  width: 0.95rem;
+  height: 0.95rem;
+  padding: 0.28rem;
+  border-radius: 50%;
+  background: var(--lime);
+}
+.feature__art {
+  display: block;
+  width: 100%;
+  border-radius: 1.75rem;
+}
+
+/* ---------- how it works: a timeline that draws itself ---------- */
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+/* the line sits at the height of the dots */
+.timeline__line {
+  position: absolute;
+  top: 4.45rem;
+  right: 16%;
+  left: 16%;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--sky), var(--mint), var(--lime));
+}
+.timeline__line[data-reveal] {
+  translate: none;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.4s var(--ease) 0.2s;
+  opacity: 1;
+}
+.timeline__line[data-in] {
+  transform: none;
+}
+.moment {
+  position: relative;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 0.7rem;
+  text-align: center;
+}
+.moment time {
+  font: 800 clamp(1.7rem, 3.2vw, 2.5rem) / 1.2 var(--display);
+}
+.moment i {
+  width: 1.9rem;
+  height: 1.9rem;
+  margin-block: 0.2rem 0.9rem;
+  border: 6px solid var(--ink);
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0 8px var(--paper);
+}
+.moment h3 {
+  font-size: 1.35rem;
+}
+.moment p {
+  max-width: 17rem;
+  color: var(--soft);
+}
+
+/* ---------- privacy: seen, never, and what the boss gets ---------- */
+.vaults {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.vault {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 1.75rem;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.vault ul {
+  display: grid;
+  gap: 1rem;
+  font-weight: 600;
+}
+.vault li {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.vault li i {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: var(--lime);
+}
+.vault--never {
+  background: var(--ink);
+  color: var(--white);
+}
+.vault--never li i {
+  background: #ff8a6b;
+  color: var(--ink);
+}
+.vault--manager {
+  background: var(--mint);
+}
+.vault__report {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 30px 60px -28px rgb(16 45 60 / 0.5);
+}
+.vault__consent {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: auto;
+  font-weight: 700;
+}
+
+/* ---------- how it feels: three moments, captions under the pictures ---------- */
+.moments {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.moments img {
+  display: block;
+  width: 100%;
+  border-radius: 1.75rem;
+}
+.moments figcaption {
+  padding: 1.1rem 0.5rem 0;
+  color: var(--soft);
+}
+.moments strong {
+  display: block;
+  color: var(--ink);
+  font: 800 1.9rem/1.2 var(--display);
+}
+
+/* ---------- testimonial: one sentence ---------- */
+.quote {
+  max-width: 54rem;
+  padding-top: clamp(5rem, 12vw, 9rem);
+  text-align: center;
+}
+.quote blockquote {
+  font: 600 clamp(1.8rem, 4.5vw, 3.2rem) / 1.15 var(--display);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.quote figcaption {
+  margin-top: 1.5rem;
+  color: var(--soft);
+}
+
+/* ---------- closing ---------- */
+.closing {
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+  margin-top: clamp(5rem, 12vw, 9rem);
+  padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+  border-radius: 2.25rem;
+  background: linear-gradient(120deg, var(--lime), var(--mint) 55%, var(--sky));
+  text-align: center;
+}
+.closing h2 {
+  max-width: 18ch;
+}
+.closing .agent {
+  width: 8rem;
+  height: 8rem;
+}
+
+@media (max-width: 900px) {
+  .feature,
+  .vaults,
+  .timeline {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .feature:nth-child(even) .feature__text {
+    order: 0;
+  }
+  .timeline {
+    gap: 3rem;
+  }
+  .timeline__line {
+    display: none;
+  }
+  .moment i {
+    margin-bottom: 0;
+  }
+  .work__stage {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'mid' 'a' 'b' 'c' 'd';
+    justify-items: stretch;
+    gap: 0.75rem;
+  }
+  .work__agent {
+    justify-self: center;
+    margin-bottom: 0.75rem;
+  }
+  .moments {
+    grid-template-columns: minmax(0, 24rem);
+    justify-content: center;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .companies ul {
+    justify-content: center;
+  }
+  .companies img {
+    width: 8.5rem;
+  }
+}
