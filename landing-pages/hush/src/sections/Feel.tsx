@@ -1,23 +1,35 @@
+import { useState } from 'react';
 import type { SiteConfig } from '../content/site';
-import { Picture } from '../components/Picture';
 
-/** The people side: three moments of a quieter week, each with a photo. */
+/**
+ * The people side, in one strip: three moments of a quieter week. The one you
+ * point at, tap or tab to opens wide. On a phone they swipe side by side.
+ */
 export function Feel({ config }: { config: SiteConfig['feel'] }) {
+  const [open, setOpen] = useState(0);
   return (
     <section id="feel" className="section wrap">
       <header className="section__head" data-reveal="">
         <p className="pill">{config.eyebrow}</p>
         <h2>{config.title}</h2>
       </header>
-      <div className="moments">
+      <div className="strip" data-reveal="zoom">
         {config.moments.map((m, i) => (
-          <figure key={i}>
-            <Picture image={m.photo} delay={i * 0.15} />
-            <figcaption data-reveal="">
+          <button
+            key={i}
+            type="button"
+            className={`strip__card ${i === open ? 'is-open' : ''}`}
+            aria-pressed={i === open}
+            onClick={() => setOpen(i)}
+            onFocus={() => setOpen(i)}
+            onPointerEnter={() => setOpen(i)}
+          >
+            <img {...m.photo} loading="lazy" />
+            <span className="strip__text">
               <strong>{m.feeling}</strong>
-              {m.text}
-            </figcaption>
-          </figure>
+              <span>{m.text}</span>
+            </span>
+          </button>
         ))}
       </div>
     </section>

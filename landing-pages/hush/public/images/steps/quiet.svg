@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="320" viewBox="0 0 400 320">
+  <style>
+    .hush { animation: float 3.2s ease-in-out infinite alternate; }
+    .spark { animation: glow 2s ease-in-out infinite alternate; }
+    .spark.b { animation-delay: -1s; }
+    @keyframes float { to { transform: translateY(-10px); } }
+    @keyframes glow { from { opacity: .25; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bff2da"/><stop offset="1" stop-color="#eefbb8"/></linearGradient>
+    <pattern id="stripes" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="14" fill="#ecfaae"/><rect width="7" height="14" fill="#f6fcd6"/></pattern>
+    <filter id="s" x="-40%" y="-20%" width="180%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#0e4030" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="400" height="320" fill="url(#bg)"/>
+  <!-- a day with room in it -->
+  <g filter="url(#s)"><rect x="36" y="30" width="170" height="260" rx="22" fill="#fff"/></g>
+  <rect x="54" y="48" width="134" height="34" rx="10" fill="#e6f0fd"/><rect x="66" y="61" width="62" height="8" rx="4" fill="#10231c"/>
+  <rect x="54" y="92" width="134" height="144" rx="14" fill="url(#stripes)" stroke="#7d9a14" stroke-width="2.500" stroke-dasharray="7 5"/>
+  <path transform="translate(97 140) scale(2.100)" d="M20 14.500A8.500 8.500 0 0 1 9.500 4 8.500 8.500 0 1 0 20 14.500z" fill="#10231c"/>
+  <rect x="54" y="246" width="134" height="28" rx="10" fill="#e6f0fd"/><rect x="66" y="256" width="84" height="8" rx="4" fill="#10231c"/>
+  <!-- Hush, headphones on -->
+  <g class="hush">
+    <g transform="translate(212 92) scale(1.350)" fill="none" stroke="#10231c" stroke-width="3.400" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M31 56c0-21 13-31 31-31s31 12 31 34c0 30-14 47-31 47S31 87 31 56z" fill="#fff"/>
+      <path d="M29 67C17 55 18 40 26 33c-3-11 9-21 19-17 5-11 24-13 31-3 11-6 25 3 23 15 11 5 13 25-4 40-1-11-4-19-11-25-9 6-24 5-30-8-4 11-13 17-22 18-1 5-2 9-3 14z" fill="#10231c"/>
+      <path d="M23 62C15 -2 109 -2 101 62" stroke-width="9"/>
+      <path d="M23 62C15 -2 109 -2 101 62" stroke="#d7f54a" stroke-width="3.600"/>
+      <rect x="13" y="55" width="19" height="32" rx="9.500" fill="#d7f54a"/>
+      <rect x="92" y="55" width="19" height="32" rx="9.500" fill="#d7f54a"/>
+      <path d="M42 59q8-6 15-1M69 57q8-4 14 2M43 68q6.500 6 13 0M70 68q6.500 6 13 0M61 74q2 5 6 3M53 90q9 7 19-1"/>
+    </g>
+  </g>
+  <g fill="#fff">
+    <path class="spark" d="M350 52l5 15 15 5-15 5-5 15-5-15-15-5 15-5z"/>
+    <path class="spark b" d="M240 252l4 11 11 4-11 4-4 11-4-11-11-4 11-4z"/>
+  </g>
+</svg>

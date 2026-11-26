@@ -440,29 +440,6 @@ ul {
   font-weight: 700;
 }
 
-/* ---------- photo placeholders ---------- */
-.s-photo {
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: 8px;
-  width: 800px;
-  height: 1000px;
-  background: linear-gradient(160deg, #cbe6ff, #bff2da 55%, #fffcf2);
-  text-align: center;
-}
-.s-photo svg {
-  width: 360px;
-  fill: #10231c;
-  opacity: 0.18;
-}
-.s-photo strong {
-  font-size: 44px;
-}
-.s-photo span {
-  font-size: 22px;
-}
-
 /* ---------- the agent check sheet ---------- */
 .s-mascot {
   display: flex;

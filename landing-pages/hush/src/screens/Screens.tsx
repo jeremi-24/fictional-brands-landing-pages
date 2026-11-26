@@ -1,5 +1,5 @@
 /*
- * The source of the images in public/images/screens and public/images/photos.
+ * The source of the images in public/images/screens.
  * Open /screens.html?screen=app&lang=en with `npm run dev` and capture #shot.
  * Replacing the image files is enough: nothing here is part of the page.
  */
@@ -215,20 +215,6 @@ function Report({ t }: { t: Text }) {
   );
 }
 
-/** Stands in for a real photo until the user drops one in. */
-function Photo({ file }: { file: string }) {
-  return (
-    <div className="s-photo">
-      <svg viewBox="0 0 200 200" aria-hidden="true">
-        <circle cx="100" cy="78" r="34" />
-        <path d="M34 190c4-48 31-68 66-68s62 20 66 68z" />
-      </svg>
-      <strong>{file}</strong>
-      <span>4:5 · IMAGE_PROMPTS.md</span>
-    </div>
-  );
-}
-
 /** The agent on its own, to check the drawing. */
 const Mascot = () => (
   <div className="s-mascot">
@@ -243,7 +229,4 @@ export const SCREENS: Record<string, (props: { t: Text }) => ReactNode> = {
   focus: Day,
   report: Report,
   agent: Mascot,
-  'photo-focus': () => <Photo file="focus.webp" />,
-  'photo-lunch': () => <Photo file="lunch.webp" />,
-  'photo-evening': () => <Photo file="evening.webp" />,
 };

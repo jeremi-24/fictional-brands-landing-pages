@@ -75,9 +75,9 @@ export const site = {
     eyebrow: 'How it works',
     title: 'From busy to quiet by Wednesday.',
     items: [
-      { time: 'Mon 08:00', title: 'Connect your calendar', body: 'Hush reads the week ahead.' },
-      { time: 'Mon 08:02', title: 'Decide in one click', body: 'Keep, shorten or skip, with the reason shown.' },
-      { time: 'Wed 14:00', title: 'Enjoy the quiet', body: 'Freed time is reserved for your real work.' },
+      { time: 'Mon 08:00', title: 'Connect your calendar', image: img('/images/steps/connect.svg', 400, 320, 'Calendar, mail, video and chat flowing into Hush.') },
+      { time: 'Mon 08:02', title: 'Decide in one click', image: img('/images/steps/decide.svg', 400, 320, 'One click declines a meeting; another is kept and a third shortened.') },
+      { time: 'Wed 14:00', title: 'Enjoy the quiet', image: img('/images/steps/quiet.svg', 400, 320, 'A day with a large block of focus time, next to Hush wearing headphones.') },
     ],
   },
   privacy: {
@@ -99,17 +99,17 @@ export const site = {
       {
         feeling: 'Focused',
         text: 'Two quiet hours on Wednesday, and the draft is done.',
-        photo: img('/images/photos/focus.webp', 960, 1200, 'A person working calmly, deep in focus.'),
+        photo: img('/images/photos/focus.webp', 720, 360, 'A woman with headphones writing in a notebook, calm and focused.'),
       },
       {
         feeling: 'Present',
-        text: 'Lunch with the team, phone face down.',
-        photo: img('/images/photos/lunch.webp', 960, 1200, 'Colleagues sharing an unhurried lunch.'),
+        text: 'Lunch with the team, phone left alone.',
+        photo: img('/images/photos/lunch.webp', 720, 360, 'Three colleagues laughing over an unhurried lunch.'),
       },
       {
         feeling: 'Light',
         text: 'Home on time, with nothing left for tonight.',
-        photo: img('/images/photos/evening.webp', 960, 1200, 'A person leaving work in the early evening light.'),
+        photo: img('/images/photos/evening.webp', 760, 380, 'A smiling man walking out of the office in the early evening.'),
       },
     ],
   },

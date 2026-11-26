@@ -75,9 +75,9 @@ const fr: DeepPartial<SiteConfig> = {
     eyebrow: 'Comment ça marche',
     title: 'Du trop-plein au calme dès mercredi.',
     items: [
-      { time: 'Lun 08:00', title: 'Connectez votre agenda', body: 'Hush lit la semaine à venir.' },
-      { time: 'Lun 08:02', title: 'Décidez en un clic', body: 'Garder, raccourcir ou décliner, avec la raison affichée.' },
-      { time: 'Mer 14:00', title: 'Profitez du calme', body: 'Le temps libéré est réservé à votre vrai travail.' },
+      { time: 'Lun 08:00', title: 'Connectez votre agenda', image: { alt: 'Agenda, e-mail, visio et messagerie reliés à Hush.' } },
+      { time: 'Lun 08:02', title: 'Décidez en un clic', image: { alt: 'Un clic décline une réunion ; une autre est gardée et une troisième raccourcie.' } },
+      { time: 'Mer 14:00', title: 'Profitez du calme', image: { alt: 'Une journée avec un grand créneau de concentration, à côté de Hush casque sur les oreilles.' } },
     ],
   },
   privacy: {
@@ -93,7 +93,7 @@ const fr: DeepPartial<SiteConfig> = {
     title: 'À quoi ressemble une semaine plus calme.',
     moments: [
       { feeling: 'Concentré', text: 'Deux heures au calme mercredi, et le brouillon est fini.', photo: { alt: 'Une personne qui travaille au calme, très concentrée.' } },
-      { feeling: 'Présent', text: 'Un déjeuner avec l’équipe, téléphone retourné.', photo: { alt: 'Des collègues qui déjeunent sans se presser.' } },
+      { feeling: 'Présent', text: 'Un déjeuner avec l’équipe, sans toucher au téléphone.', photo: { alt: 'Des collègues qui déjeunent sans se presser.' } },
       { feeling: 'Léger', text: 'Parti à l’heure, sans rien à rattraper ce soir.', photo: { alt: 'Une personne qui quitte le travail dans la lumière du soir.' } },
     ],
   },
@@ -167,9 +167,9 @@ const de: DeepPartial<SiteConfig> = {
     eyebrow: 'So funktioniert es',
     title: 'Bis Mittwoch von voll zu ruhig.',
     items: [
-      { time: 'Mo 08:00', title: 'Kalender verbinden', body: 'Hush liest die kommende Woche.' },
-      { time: 'Mo 08:02', title: 'Mit einem Klick entscheiden', body: 'Behalten, kürzen oder absagen, mit Begründung.' },
-      { time: 'Mi 14:00', title: 'Die Ruhe genießen', body: 'Freie Zeit wird für deine eigentliche Arbeit reserviert.' },
+      { time: 'Mo 08:00', title: 'Kalender verbinden', image: { alt: 'Kalender, E-Mail, Video und Chat laufen bei Hush zusammen.' } },
+      { time: 'Mo 08:02', title: 'Mit einem Klick entscheiden', image: { alt: 'Ein Klick sagt ein Meeting ab; eines bleibt, ein drittes wird gekürzt.' } },
+      { time: 'Mi 14:00', title: 'Die Ruhe genießen', image: { alt: 'Ein Tag mit einem großen Fokusblock, daneben Hush mit Kopfhörern.' } },
     ],
   },
   privacy: {
@@ -185,7 +185,7 @@ const de: DeepPartial<SiteConfig> = {
     title: 'So fühlt sich eine ruhigere Woche an.',
     moments: [
       { feeling: 'Konzentriert', text: 'Zwei ruhige Stunden am Mittwoch, und der Entwurf ist fertig.', photo: { alt: 'Eine Person arbeitet ruhig und konzentriert.' } },
-      { feeling: 'Präsent', text: 'Mittagessen mit dem Team, das Handy liegt umgedreht.', photo: { alt: 'Kolleginnen und Kollegen beim entspannten Mittagessen.' } },
+      { feeling: 'Präsent', text: 'Mittagessen mit dem Team, und das Handy bleibt liegen.', photo: { alt: 'Kolleginnen und Kollegen beim entspannten Mittagessen.' } },
       { feeling: 'Leicht', text: 'Pünktlich zu Hause, und für heute Abend ist nichts offen.', photo: { alt: 'Eine Person verlässt die Arbeit im Abendlicht.' } },
     ],
   },

@@ -1,8 +1,8 @@
 # Hush — photo prompts
 
-Three photos showing how a quieter week feels. Replace the placeholder files in `public/images/photos/`, keeping the same names (or change the paths in `src/content/site.ts`).
+Three photos showing how a quieter week feels. To change them, replace the files in `public/images/photos/`, keeping the same names (or change the paths in `src/content/site.ts`).
 
-All three: **4:5 vertical, 960 × 1200 or larger, WebP, under 250 KB**.
+All three: **2:1 horizontal, 1440 × 720 or larger, one image per file, WebP, under 250 KB**.
 
 ## Colour rules (paste at the end of every prompt)
 
@@ -10,7 +10,7 @@ All three: **4:5 vertical, 960 × 1200 or larger, WebP, under 250 KB**.
 
 ## 1. `focus.webp` — Focused
 
-> A Black woman in her early thirties working on her own on a quiet Wednesday afternoon, absorbed and content, writing in a thin lime-yellow notebook, lime-yellow over-ear headphones, deep forest-green knit sweater. Light oak desk, matte cream laptop seen from the side, mint-green mug. Cream wall, one leafy plant, a window with pale blue sky. Warm light from the left. 85 mm lens, shallow depth of field, face and hands in the upper two thirds.
+> A Black woman in her early thirties working on her own on a quiet Wednesday afternoon, absorbed and content, writing in a thin lime-yellow notebook, lime-yellow over-ear headphones, deep forest-green knit sweater. Light oak desk, matte cream laptop seen from the side, mint-green mug. Cream wall, one leafy plant, a window with pale blue sky. Warm light from the left. 85 mm lens, shallow depth of field, wide horizontal framing.
 >
 > *(add the colour rules)*
 
@@ -22,7 +22,7 @@ All three: **4:5 vertical, 960 × 1200 or larger, WebP, under 250 KB**.
 
 ## 3. `evening.webp` — Light
 
-> A man in his late twenties leaving work at six in the early evening, walking out through a glass door with a relaxed smile, cream canvas tote bag, sage-green overshirt over a cream T-shirt, lime-yellow headphones around his neck. Street lined with trees, soft golden-hour light kept pale and cool, pale blue sky. 50 mm lens, slight movement, plenty of breathing space above him.
+> A man in his late twenties leaving work at six in the early evening, walking out through a glass door with a relaxed smile, cream canvas tote bag, sage-green overshirt over a cream T-shirt, lime-yellow headphones around his neck. Street lined with trees, soft golden-hour light kept pale and cool, pale blue sky. 50 mm lens, slight movement, wide horizontal framing.
 >
 > *(add the colour rules)*
 

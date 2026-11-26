@@ -137,59 +137,36 @@
   border-radius: 1.75rem;
 }
 
-/* ---------- how it works: a timeline that draws itself ---------- */
-.timeline {
-  position: relative;
+/* ---------- how it works: three pictures, a time and a few words ---------- */
+.how {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
-}
-/* the line sits at the height of the dots */
-.timeline__line {
-  position: absolute;
-  top: 4.45rem;
-  right: 16%;
-  left: 16%;
-  height: 4px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--sky), var(--mint), var(--lime));
-}
-.timeline__line[data-reveal] {
-  translate: none;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 1.4s var(--ease) 0.2s;
-  opacity: 1;
-}
-.timeline__line[data-in] {
-  transform: none;
-}
-.moment {
-  position: relative;
-  display: grid;
-  align-content: start;
-  justify-items: center;
-  gap: 0.7rem;
+  gap: 1.25rem;
   text-align: center;
 }
-.moment time {
-  font: 800 clamp(1.7rem, 3.2vw, 2.5rem) / 1.2 var(--display);
+.how img {
+  display: block;
+  width: 100%;
+  border-radius: 1.75rem;
+  box-shadow: var(--shadow);
 }
-.moment i {
-  width: 1.9rem;
-  height: 1.9rem;
-  margin-block: 0.2rem 0.9rem;
-  border: 6px solid var(--ink);
-  border-radius: 50%;
-  background: var(--lime);
-  box-shadow: 0 0 0 8px var(--paper);
+.how div {
+  display: grid;
+  justify-items: center;
+  gap: 0.6rem;
 }
-.moment h3 {
-  font-size: 1.35rem;
+/* the time sits across the bottom edge of its picture */
+.how time {
+  position: relative;
+  margin-top: -1.15rem;
+  padding: 0.35rem 1.1rem;
+  border-radius: 99px;
+  background: var(--ink);
+  color: var(--lime);
+  font: 800 1.05rem var(--display);
 }
-.moment p {
-  max-width: 17rem;
-  color: var(--soft);
+.how h3 {
+  font-size: 1.5rem;
 }
 
 /* ---------- privacy: seen, never, and what the boss gets ---------- */
@@ -251,25 +228,65 @@
   font-weight: 700;
 }
 
-/* ---------- how it feels: three moments, captions under the pictures ---------- */
-.moments {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
+/* ---------- how it feels: one strip, the chosen moment opens wide ---------- */
+.strip {
+  display: flex;
+  gap: 0.75rem;
+  height: clamp(18rem, 30vw, 23rem);
 }
-.moments img {
-  display: block;
-  width: 100%;
+.strip__card {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
   border-radius: 1.75rem;
+  background: var(--mint);
+  text-align: left;
+  transition: flex-grow 0.7s var(--ease);
 }
-.moments figcaption {
-  padding: 1.1rem 0.5rem 0;
+.strip__card.is-open {
+  flex-grow: 2.7;
+}
+.strip__card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* the first photo has its subject on the right */
+.strip__card:first-child img {
+  object-position: 70% center;
+}
+.strip__text {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  max-width: calc(100% - 1.7rem);
+  padding: 0.65rem 1.1rem;
+  border-radius: 1.15rem;
+  background: rgb(255 255 255 / 0.93);
+  backdrop-filter: blur(10px);
+}
+.strip__text strong {
+  display: block;
+  font: 800 1.5rem/1.2 var(--display);
+}
+.strip__text span {
+  display: none;
   color: var(--soft);
 }
-.moments strong {
+.is-open .strip__text span {
   display: block;
-  color: var(--ink);
-  font: 800 1.9rem/1.2 var(--display);
+  animation: rise 0.5s 0.2s var(--ease) both;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
 }
 
 /* ---------- testimonial: one sentence ---------- */
@@ -309,21 +326,16 @@
 
 @media (max-width: 900px) {
   .feature,
-  .vaults,
-  .timeline {
+  .vaults {
     grid-template-columns: minmax(0, 1fr);
   }
   .feature:nth-child(even) .feature__text {
     order: 0;
   }
-  .timeline {
-    gap: 3rem;
-  }
-  .timeline__line {
-    display: none;
-  }
-  .moment i {
-    margin-bottom: 0;
+  .how {
+    grid-template-columns: minmax(0, 26rem);
+    justify-content: center;
+    gap: 2rem;
   }
   .work__stage {
     grid-template-columns: minmax(0, 1fr);
@@ -335,11 +347,6 @@
     justify-self: center;
     margin-bottom: 0.75rem;
   }
-  .moments {
-    grid-template-columns: minmax(0, 24rem);
-    justify-content: center;
-    gap: 2.5rem;
-  }
 }
 
 @media (max-width: 620px) {
@@ -348,5 +355,37 @@
   }
   .companies img {
     width: 8.5rem;
+  }
+}
+
+/* phone: swipe from one moment to the next, words under the picture */
+@media (max-width: 700px) {
+  .strip {
+    height: auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .strip__card,
+  .strip__card.is-open {
+    display: flex;
+    flex: 0 0 85%;
+    flex-direction: column;
+    scroll-snap-align: center;
+    background: var(--white);
+  }
+  .strip__card img {
+    position: static;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+  .strip__text {
+    position: static;
+    max-width: none;
+    padding: 0.9rem 1.1rem 1.1rem;
+    background: none;
+  }
+  .strip__text span {
+    display: block;
   }
 }

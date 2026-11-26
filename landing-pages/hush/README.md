@@ -25,7 +25,7 @@ Open http://localhost:5173.
 
 - A landscape hero with the menu inside it, turning into a floating pill on scroll, and a title whose "meetings" gets crossed out.
 - Hush, the agent (see [AGENT.md](AGENT.md)), with its jobs arriving around it.
-- Benefits, a self-drawing timeline, privacy cards, three moments of a quieter week, a testimonial and pricing.
+- Benefits, three animated illustrations for how it works, privacy cards, three moments of a quieter week, a testimonial and pricing.
 - Everything appears on scroll. English, French and German.
 - Keyboard friendly, and respects `prefers-reduced-motion`.
 
@@ -39,7 +39,8 @@ Every screen, logo and photo is a plain file. Replace it, or change its path in 
 | `screens/skip-`, `reply-`, `focus-<lang>.webp` | The three feature pictures | 1024 × 864 |
 | `screens/report-<lang>.webp` | What the manager sees | 800 × 600 |
 | `logos/*.svg` | "Trusted by" logos | 160 × 32 |
-| `photos/focus.webp`, `lunch.webp`, `evening.webp` | Photos of people, **placeholders for now**: see [IMAGE_PROMPTS.md](IMAGE_PROMPTS.md) | 960 × 1200 |
+| `steps/*.svg` | The three "how it works" illustrations (no text, animated) | 400 × 320 |
+| `photos/focus.webp`, `lunch.webp`, `evening.webp` | Photos of people (prompts in [IMAGE_PROMPTS.md](IMAGE_PROMPTS.md)) | 2:1, 720 × 360 or larger |
 
 Keep the `width`, `height` and `alt` in `site.ts` in step with your files.
 
@@ -52,6 +53,6 @@ The sample screens are drawn in `src/screens/`. To redraw one, run `npm run dev`
 - `src/styles/`: colours are CSS variables at the top of `base.css`.
 - `src/sections/`: one file per section.
 
-The hero sky (`public/images/sky-*.jpg`) was generated from noise functions in code for this project; it contains no third-party material. The company logos are invented for this project.
+The hero sky (`public/images/sky-*.jpg`) was generated from noise functions in code for this project; it contains no third-party material. The company logos are invented for this project. The three photos are AI-generated (Google Gemini); the people in them do not exist.
 
 Everything is fictional: the product, people, companies, prices and numbers. Fonts: Bricolage Grotesque and Figtree (Google Fonts, SIL Open Font License).
