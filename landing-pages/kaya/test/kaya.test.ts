@@ -23,6 +23,9 @@ const inPublic = (src: string) => existsSync(new URL(`../public${src}`, import.m
 const lock: { packages: Record<string, { link?: boolean }> } = JSON.parse(readFileSync(new URL('../package-lock.json', import.meta.url), 'utf8'));
 for (const [name, entry] of Object.entries(lock.packages)) assert.ok(!entry.link && !name.startsWith('..'), `package-lock.json: ${name} points outside the project`);
 
+// every file index.html links to from the site root exists (tab and home screen icons)
+for (const [, src] of readFileSync(new URL('../index.html', import.meta.url), 'utf8').matchAll(/<link [^>]*href="(\/[^"]+)"/g)) assert.ok(inPublic(src), `index.html: missing ${src}`);
+
 // every picture and model the page asks for, in every language, is a file in public/
 const files = (value: unknown): string[] =>
   typeof value === 'string' ? (/^\/(images|models)\//.test(value) ? [value] : []) : value && typeof value === 'object' ? Object.values(value).flatMap(files) : [];
