@@ -19,6 +19,10 @@ assert.ok(Math.abs(Math.hypot((free.x - 0.5) / 0.02, (free.y - 0.7) / 0.03) - 1)
 
 const inPublic = (src: string) => existsSync(new URL(`../public${src}`, import.meta.url));
 
+// the lock file must install anywhere: a package pointing outside the project (a shared node_modules) breaks the deployment
+const lock: { packages: Record<string, { link?: boolean }> } = JSON.parse(readFileSync(new URL('../package-lock.json', import.meta.url), 'utf8'));
+for (const [name, entry] of Object.entries(lock.packages)) assert.ok(!entry.link && !name.startsWith('..'), `package-lock.json: ${name} points outside the project`);
+
 // every picture and model the page asks for, in every language, is a file in public/
 const files = (value: unknown): string[] =>
   typeof value === 'string' ? (/^\/(images|models)\//.test(value) ? [value] : []) : value && typeof value === 'object' ? Object.values(value).flatMap(files) : [];
