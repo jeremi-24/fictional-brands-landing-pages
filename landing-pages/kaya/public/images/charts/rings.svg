@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="290" height="290" viewBox="0 0 290 290" fill="none" stroke-width="28" stroke-linecap="round">
+  <!-- today's share of each goal, outer to inner: 6240/8000 steps, 4.2/5 km, 52/60 min. Dash = share x circumference. -->
+  <circle cx="145" cy="145" r="126" stroke="#A8431F" stroke-opacity=".16"/>
+  <circle cx="145" cy="145" r="126" stroke="#A8431F" stroke-dasharray="617.5 791.7" transform="rotate(-90 145 145)"/>
+  <circle cx="145" cy="145" r="93" stroke="#E08A4A" stroke-opacity=".18"/>
+  <circle cx="145" cy="145" r="93" stroke="#E08A4A" stroke-dasharray="490.8 584.3" transform="rotate(-90 145 145)"/>
+  <circle cx="145" cy="145" r="60" stroke="#3B1E12" stroke-opacity=".14"/>
+  <circle cx="145" cy="145" r="60" stroke="#3B1E12" stroke-dasharray="326.7 377" transform="rotate(-90 145 145)"/>
+</svg>

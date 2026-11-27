@@ -1,0 +1,71 @@
+/*
+ * Kaya design system, "Terracotta arches": every colour, font and shared measure of the page.
+ * Rebrand here. No other stylesheet writes a colour (npm test checks it). See DESIGN.md.
+ */
+:root {
+  /* channels, for transparent versions: rgb(var(--ink-rgb) / 0.1) */
+  --ink-rgb: 42 22 13;
+  --on-deep-rgb: 251 235 221;
+
+  /* grounds: sections are full-width bands of these */
+  --paper: #fbf4ec;
+  --sand: #f1e1cf;
+  --card: #fffdf9;
+  --accent: #a8431f;
+  --deep: #3b1e12;
+  --clay: #e9cdb6;
+
+  /* the soft halos behind the opening: its ground, then the lights and shades on it */
+  --halo-ground: #9a3b1a;
+  --halo-warm: #ee9650;
+  --halo-glow: #fbd3a6;
+  --halo-ember: #e06c35;
+  --halo-shade: #6a210d;
+  --halo-night: #47170a;
+
+  /* the three progress rings, outer to inner (also written in images/charts/rings.svg) */
+  --ring-1: #a8431f;
+  --ring-2: #e08a4a;
+  --ring-3: #3b1e12;
+
+  /* text */
+  --ink: #2a160d;
+  --soft: #765b4c;
+  --on-accent: #fff4e8;
+  --on-deep: #fbebdd;
+  --on-deep-soft: rgb(var(--on-deep-rgb) / 0.76);
+  /* on clay, small text needs more weight than --soft and --accent give */
+  --ink-soft: rgb(var(--ink-rgb) / 0.72);
+  --accent-ink: #8c3314;
+
+  /* the four colours of the sandal, in the order of site.ts */
+  --swatch-1: #f2eee3;
+  --swatch-2: #b4502b;
+  --swatch-3: #7a4c34;
+  --swatch-4: #2b2420;
+
+  --edge: rgb(var(--ink-rgb) / 0.16);
+  --edge-deep: rgb(var(--on-deep-rgb) / 0.24);
+
+  /* type, motion, rhythm */
+  --display: 'Big Shoulders Display', 'Oswald', Impact, sans-serif;
+  --body: 'DM Sans', system-ui, sans-serif;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* type scale, from the loudest to the quietest: use nothing else for text sizes */
+  --text-hero: clamp(3.75rem, 11vw, 10.5rem);
+  --text-h2: clamp(3rem, 6.8vw, 6.25rem);
+  --text-h3: clamp(2.35rem, 3.8vw, 3.5rem);
+  --text-h4: clamp(1.4rem, 1.8vw, 1.65rem);
+  --text-lead: clamp(1.125rem, 1.4vw, 1.3rem);
+  --text-body: 1.0625rem;
+  --text-small: 0.875rem;
+  /* shapes: square corners, and the arch that frames the pictures */
+  --radius: 0.4rem;
+  --arch: 999px 999px 0.4rem 0.4rem;
+  /* air above and below a band, and at its sides */
+  --band: clamp(4.5rem, 9vw, 7.5rem);
+  --side: clamp(1.25rem, 4vw, 3.5rem);
+  /* a band that holds on one screen, never too short to read */
+  --screen: max(100svh, 35rem);
+  color-scheme: light;
+}
