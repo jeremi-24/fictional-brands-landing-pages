@@ -4,7 +4,9 @@ The plastic sandal of a West African childhood, grown up: a product landing page
 
 Built with **React 19, TypeScript, Vite and three.js**. No animation library and no icon package.
 
-![Kaya landing page](../../previews/kaya.jpg)
+**Live: [kaya-lovat.vercel.app](https://kaya-lovat.vercel.app)**
+
+[![Kaya landing page](../../previews/kaya.jpg)](https://kaya-lovat.vercel.app)
 
 ## Inside the page
 
@@ -56,7 +58,7 @@ Every picture is a plain file, named in `src/content/site.ts`. Replace the file,
 | `images/charts/*.svg` | Progress rings, small charts and raindrops | |
 | `images/doodles/*.png` | Doodles of the footer and the last band (list: `doodles` in `site.ts`) | 560 × 440, transparent |
 | `models/kaya.glb` | The 3D sandal (rules in `src/three/model.ts`) | |
-| `favicon.svg`, `og-image.jpg` | Tab icon, link preview (set its address in `index.html`) | 1200 × 630 |
+| `favicon.svg`, `og-image.jpg` | Tab icon, link preview (on Vercel its address is filled in at build time) | 1200 × 630 |
 
 Keep the `width`, `height` and `alt` in `site.ts` in step with your files. How each of the five opening pictures is cropped is set in `src/styles/sections.css` (`object-position`). `npm test` checks that every named file exists.
 

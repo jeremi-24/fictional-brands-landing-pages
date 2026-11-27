@@ -23,7 +23,7 @@ Free to use, MIT licensed.
           <img src="previews/kaya.jpg" alt="Kaya: a tall headline above five photographs in arched frames" width="700">
         </a>
       </td>
-      <td><strong><a href="landing-pages/kaya">Kaya</a></strong></td>
+      <td><strong><a href="landing-pages/kaya">Kaya</a></strong> · <a href="https://kaya-lovat.vercel.app">Live</a></td>
       <td>The sandal of a West African childhood, grown up into a smart one, in 3D.</td>
     </tr>
     <tr>
